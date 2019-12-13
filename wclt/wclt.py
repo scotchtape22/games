@@ -114,7 +114,7 @@ for x in h_load:
 		"r_init":0,"r_shts":0,"r_hit":0,
 		"c_pos":"","w_pos":xi[10],"sw_pos":xi[11],"l_pos":xi[12],"sl_pos":xi[13],
 		"exp":0,"fat":0,
-		"inj":xi[14],"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_cost":xi[14]}
+		"inj":xi[14],"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":xi[14]}
 		all_players.append(new_player)
 
 #Load Away Team
@@ -144,7 +144,7 @@ for x in a_load:
 		"r_init":0,"r_shts":0,"r_hit":0,
 		"c_pos":"","w_pos":xi[10],"sw_pos":xi[11],"l_pos":xi[12],"sl_pos":xi[13],
 		"exp":0,"fat":0,
-		"inj":xi[14],"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_cost":xi[14]}
+		"inj":xi[14],"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":xi[14]}
 		all_players.append(new_player)
 #Be sure to close files!
 
@@ -211,6 +211,7 @@ while clock < 21:
 		if p["c_pos"] == "bench":
 			continue
 		else:
+			p["g_rd"] = p["g_rd"]
 			if p["team"]="home"
 				p["r_init"]=die_roll("int",p,h_team)
 			elif p["team"]="away"
