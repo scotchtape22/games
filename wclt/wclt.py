@@ -13,7 +13,7 @@ def die_roll(chk,player,team):
 			the_result = the_result*.8		
 		if player["per"] == "aggressive":
 			the_result = the_result*1.25
-		elif player["per"] == "cautious":
+		elif player["per"] == "reactive":
 			the_result = the_result*.8	
 		if player["c_pos"] == "skirmisher":
 			the_result = the_result*2
@@ -39,7 +39,7 @@ def die_roll(chk,player,team):
 			the_result = the_result*1.25
 		elif player["drug"] == "adderall":
 			the_result = the_result*.8		
-		if player["per"] == "cautious":
+		if player["per"] == "reactive":
 			the_result = the_result*1.25
 		elif player["per"] == "stoic":
 			the_result = the_result*.8	
@@ -90,6 +90,8 @@ all_players = []
 #Load Home Team
 h_team={"name":"hometeam","points":0,"Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0}
 #Load Players
+h_path = input("Home Team File: ")
+h_load = open(h_path,"w")
 for x in h_load:
 	xi = x.split()
 	if xi[0] == "medic":
@@ -120,6 +122,9 @@ for x in h_load:
 #Load Away Team
 a_team={"name":"hometeam","points":0,"Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0}
 #Load Players
+a_path = input("Away Team File: ")
+a_load = open(a_path,"w")
+
 for x in a_load:
 	xi = x.split()
 	if xi[0] == "medic":
@@ -520,7 +525,7 @@ for p in players:
 		lu_set = ["int","int","int","acc","acc","eva","fit","fit","ego","ego","kno","kno"]
 	elif p["per"] == "stoic":
 		lu_set = ["int","acc","acc","acc","acc","eva","fit","fit","ego","ego","kno","kno"]
-	elif p["per"] == "cautious":
+	elif p["per"] == "reactive":
 		lu_set = ["int","int","acc","eva","eva","eva","fit","fit","ego","ego","kno","kno"]
 	elif p["per"] == "ambitious":
 		lu_set = ["int","int","acc","acc","eva","eva","fit","fit","ego","ego","ego","kno"]
