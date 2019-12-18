@@ -19,14 +19,16 @@ while create > 0:
 	my_int = random.randint(40,70)
 	my_acc = random.randint(40,70)
 	my_eva = random.randint(40,70)
-	my_dur = random.randint(30,70)
-	my_pot = random.randint(40,70)
+	my_pot = random.randint(30,80)
+	my_fit = random.randint(40,70)
 	my_ego = random.randint(0,20)
 	my_kno = random.randint(10,30)
-	my_name = random.choice(f_name) + " " + random.choice(l_name)
+	my_name = random.choice(f_name)+" "+random.choice(l_name)
 	my_home = random.choice(locations)
 	my_age = random.randint(16,20)
 
-	print(my_name + ":" + my_home + ":" + str(my_age) + ":" + str(my_ego) + ":" + my_dispo + ":" + str(my_int)  + ":" + str(my_acc)  + ":" + str(my_eva) + ":" + str(my_dur) + ":" + str(my_pot) + ":" + str(my_kno))
+	#Change the output to match the format in the team template, which should eventually match the sql output
+	print(my_name+":"+str(my_int) +":"+str(my_acc) +":"+str(my_eva)+":"+str(my_pot)+":"+str(my_fit)+":"+str(my_kno)+":"+str(my_kno)+":"+my_dispo+":NA:NA:NA:NA:NA:0:0:0:0:0:"+my_home+":0:0:"+"NA")
 
 	create = create - 1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE

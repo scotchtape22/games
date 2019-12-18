@@ -4,10 +4,10 @@
 # Delimiter is ':'
 name my_team
 #COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
-medic
-mentor
-marketeer
-#ROSTER NAME INT ACC EVA POT FIT EGO KNO PERSONALITY DRUG WIN S_WIN LOSE S_LOSE INJ Hits-Taken Players-Hit Flags-Captured Rounds-Played GAME_COST CONTRACT_LENGTH CONTRACT_TYPE
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
 roster-player
 roster-player
 roster-player
