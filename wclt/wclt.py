@@ -9,7 +9,7 @@ from operator import itemgetter
 def die_roll(chk,player,team):
 	the_roll = random.randint(0,99)
 	#Debug log roll
-	game_log(player['name']+" rolled a "+str(the_roll)+" for "+chk,"l")
+	game_log(player['name']+" rolled a "+str(the_roll)+" for "+chk,"l",0)
 	if chk == "int":
 		the_result = player["s_int"] - the_roll
 		if player["drug"] == "cocaine":
@@ -71,27 +71,40 @@ def die_roll(chk,player,team):
 		the_result = the_result - 50
 	#If 90+, a light was generated
 	if the_result > 89 and chk != "pot" and chk != "fit":
-		game_log(player["name"]+" made a highlighut play!","l")
+		game_log(player["name"]+" made a highlighut play!","l",0)
 		team["Lights"] = team["Lights"] + 1
 	#50+ earns exp, -25 earns fatigute
 	if the_result > 49 and chk != "pot" and chk != "fit":
-		game_log(player["name"]+" learned something!","l")
+		game_log(player["name"]+" learned something!","l",0)
 		player["exp"] = player["exp"] + 1
 	elif the_result < -25 and chk != "pot" and chk != "fit":
-		game_log(player["name"]+" may have injured himself!","l")
+		game_log(player["name"]+" may have injured himself!","l",0)
 		player["fat"] = player["fat"] + 1
 	return the_result
 
 
-def game_log(msg,tier):
+def game_log(msg,tier,d_flag):
 	#Will write to a file eventually
 	#Tiers: d - debug,l - log only, t - terminal and log
 	#Don't show die rolls to screen?
 	if tier == 't':
 		print(msg)
 		time.sleep(1)
+		l_load = open("game_log.txt","w+")
+		l_load.write(msg)
+		l_load.close()	
 		return
 	elif tier == 'l':
+		l_load = open("game_log.txt","w+")
+		l_load.write(msg)
+		l_load.close()
+		return
+	elif tier == 'd':
+		if d_flag == 1:
+			print(msg)
+			l_load = open("game_debug.txt","w+")
+			l_load.write(msg)
+			l_load.close()
 		return
 
 
@@ -164,11 +177,10 @@ for x in a_load:
 		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[21])}
 		all_players.append(new_player)
 #Be sure to close files at the end
-l_path = input("Game File: ")
-l_load = open(l_path,"w+")
+
 
 clock = 1
-game_log("Match Begins!","t")
+game_log("Match Begins!","t",0)
 
 while clock < 41:
 	#Figure out the game state and set the actions and reset round info
@@ -284,7 +296,7 @@ while clock < 41:
 							ambush = die_roll("acc",ambu,h_team)
 							dodge = die_roll("eva",all_players[active],a_team)
 							if ambush > dodge:
-								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t")
+								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t",0)
 								h_team["points"] = h_team["points"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								stealing = 0
@@ -292,13 +304,13 @@ while clock < 41:
 							ambush = die_roll("acc",ambu,a_team)
 							dodge = die_roll("eva",all_players[active],t_team)
 							if ambush > dodge:
-								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t")
+								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t",0)
 								a_team["points"] = a_team["points"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								stealing = 0
 				#If unhit, steal!
 				if stealing == 1:
-					game_log(all_players[active]["name"]+" has stolen the enemy flag and ended the round!","t")
+					game_log(all_players[active]["name"]+" has stolen the enemy flag and ended the round!","t",0)
 					if all_players[active]["team"] == "home":
 						h_team["points"] = h_team["points"] + 4
 						all_players[active]["g_fc"] = all_players[active]["g_fc"] + 1
@@ -319,36 +331,36 @@ while clock < 41:
 							attack = die_roll("acc",all_players[active],h_team)
 							dodge = die_roll("eva",all_players[target],a_team)
 							if attack > dodge:
-								game_log(all_players[active]["name"]+" hits "+all_players[target]["name"]+"!","t")
+								game_log(all_players[active]["name"]+" hits "+all_players[target]["name"]+"!","t",0)
 								h_team["points"] = h_team["points"] + 1
 								all_players[active]["g_ph"] = all_players[active]["g_ph"] + 1
 								all_players[target]["r_hit"] = 1
 								break
 							else:
-								game_log(all_players[active]["name"]+" misses "+all_players[target]["name"]+"!","t")								
+								game_log(all_players[active]["name"]+" misses "+all_players[target]["name"]+"!","t",0)								
 								break
 						if all_players[active]["team"] == "away":
 							attack = die_roll("acc",all_players[active],a_team)
 							dodge = die_roll("eva",all_players[target],h_team)
 							if attack > dodge:
-								game_log(all_players[active]["name"]+" hits "+all_players[target]["name"]+"!","t")
+								game_log(all_players[active]["name"]+" hits "+all_players[target]["name"]+"!","t",0)
 								a_team["points"] = a_team["points"] + 1
 								all_players[active]["g_ph"] = all_players[active]["g_ph"] + 1
 								all_players[target]["r_hit"] = 1
 								break
 							else:
-								game_log(all_players[active]["name"]+" misses "+all_players[target]["name"]+"!","t")								
+								game_log(all_players[active]["name"]+" misses "+all_players[target]["name"]+"!","t",0)								
 								break
 					target = target - 1					
 
 				#If you can't find a target, take the flag
 				if stealing == 1:
-					game_log(all_players[active]["name"]+" has stolen the unprotected enemy flag and ended the round!","t")
+					game_log(all_players[active]["name"]+" has stolen the unprotected enemy flag and ended the round!","t",0)
 					if all_players[active]["team"] == "home":
-						game_log("The away team had no players to protect the flag","t")
+						game_log("The away team had no players to protect the flag","t",0)
 						h_team["points"] = h_team["points"] + 4
 					elif all_players[active]["team"] == "away":
-						game_log("The home team had no players to protect the flag","t")
+						game_log("The home team had no players to protect the flag","t",0)
 						a_team["points"] = a_team["points"] + 4
 					break
 
@@ -361,7 +373,7 @@ while clock < 41:
 			shots_remaining = shots_remaining + s["r_shts"]
 
 		if shots_remaining == 0:
-			game_log("No shots remaining","l")
+			game_log("No shots remaining","l",0)
 			break
 		#Choose next
 		if active == len(all_players) - 1:
@@ -371,9 +383,9 @@ while clock < 41:
 
 		#If not 
 	#Clock Advance
-	game_log("end of round "+str(clock),"t")
-	game_log("Home: "+str(h_team["points"]),"t")
-	game_log("Away: "+str(a_team["points"]),"t")
+	game_log("end of round "+str(clock),"t",0)
+	game_log("Home: "+str(h_team["points"]),"t",0)
+	game_log("Away: "+str(a_team["points"]),"t",0)
 	clock = clock + 1
 
 
@@ -381,14 +393,14 @@ while clock < 41:
 #################END OF GAME#################
 
 #Final
-game_log("FINAL SCORE:","t")
-game_log("Home: "+str(h_team["points"]),"t")
-game_log("Away: "+str(a_team["points"]),"t")
+game_log("FINAL SCORE:","t",0)
+game_log("Home: "+str(h_team["points"]),"t",0)
+game_log("Away: "+str(a_team["points"]),"t",0)
 
 #Sort players for better stat view
 #Stats
-game_log("FINAL STATS:","t")
-game_log("Player\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t")
+game_log("FINAL STATS:","t",0)
+game_log("Player\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t",0)
 for p in all_players:
 	try:
 		sp = p["g_ph"]/p["g_st"]
@@ -396,7 +408,7 @@ for p in all_players:
 		sp = "NA"
 	pp = p["g_ph"]+(p["g_fc"]*4)
 	ppm = p["g_ht"]+(p["g_fc"]*4)
-	game_log(p["name"]+":\t"+p["g_ph"]+"\t"+p["g_st"]+"\t"+p["g_fc"]+"\t"+sp+"\t"+pp+"\t"+p["g_ht"]+"\t"+ppm,"t")
+	game_log(p["name"]+":\t"+str(p["g_ph"])+"\t"+str(p["g_st"])+"\t"+str(p["g_fc"])+"\t"+sp+"\t"+pp+"\t"+str(p["g_ht"])+"\t"+ppm,"t",0)
 
 # Money Earned
 # Roll for gaining credits
@@ -529,8 +541,8 @@ else:
 a_net = a_cashtot - a_gamecost
 h_net = h_cashtot - h_gamecost
 
-game_log("The away team earned "+a_net,"l")
-game_log("The home team earned "+h_net,"l")
+game_log("The away team earned "+a_net,"l",0)
+game_log("The home team earned "+h_net,"l",0)
 
 
 # Level Ups
@@ -569,22 +581,22 @@ for p in players:
 		this_lvl = random.choice(lu_set)
 		if this_lvl == "int":
 			p["s_int"] = p["s_int"] + 1
-			game_log(p["name"]+" leveled up initiative!","l")
+			game_log(p["name"]+" leveled up initiative!","l",0)
 		elif this_lvl == "acc":
 			p["s_acc"] = p["s_acc"] + 1
-			game_log(p["name"]+" leveled up accuracy!","l")
+			game_log(p["name"]+" leveled up accuracy!","l",0)
 		elif this_lvl == "eva":
 			p["s_eva"] = p["s_eva"] + 1
-			game_log(p["name"]+" leveled up evasion!","l")
+			game_log(p["name"]+" leveled up evasion!","l",0)
 		elif this_lvl == "fit":
 			p["s_fit"] = p["s_fit"] + 1
-			game_log(p["name"]+" leveled up fitness!","l")
+			game_log(p["name"]+" leveled up fitness!","l",0)
 		elif this_lvl == "ego":
 			p["s_ego"] = p["s_ego"] + 1
-			game_log(p["name"]+" leveled up ego!","l")
+			game_log(p["name"]+" leveled up ego!","l",0)
 		elif this_lvl == "kno":
 			p["s_kno"] = p["s_kno"] + 1
-			game_log(p["name"]+" leveled up knowledge!","l")
+			game_log(p["name"]+" leveled up knowledge!","l",0)
 		lurs = lurs - 1
 
 #Injuries
@@ -611,11 +623,10 @@ for p in players:
 		#Roll assuming D10 for now
 		total_in = total_in + random.randint(1,10)
 		inrc = inrc - 1
-	game_log(p["name"] + " is injured for "+total_in+" games","l")
+	game_log(p["name"] + " is injured for "+total_in+" games","l",0)
 	p["inj"] = p["inj"] + total_in
 
 #Save
 #Add to all time stats?
 a_load.close()
 h_load.close()
-l_load.close()
