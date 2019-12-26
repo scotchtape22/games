@@ -1,0 +1,23 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name my_team
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Sarge Moser:41:52:50:77:66:11:11:ambitious:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:Atlanta:0:0:NA
+roster-player:Sanic James:53:68:63:75:59:22:22:ambitious:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:Toledo:0:0:NA
+roster-player:Robert St.Paul:65:57:47:62:66:29:29:reactive:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:Chicago:0:0:NA
+roster-player:no-name Cooles:60:60:61:38:54:30:30:reactive:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:Toledo:0:0:NA
+roster-player:Marie L'Anse:70:40:51:38:61:17:17:stoic:NA:bench:bench:bench:bench:0:0:0:0:0:New Orleans:0:0:NA
+roster-player:Sid Briggs:55:47:57:41:43:13:13:ambitious:NA:bench:bench:bench:bench:0:0:0:0:0:Vancouver:0:0:NA
+roster-player:Flash Linden:41:58:56:52:57:25:25:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:Champagn:0:0:NA
+roster-player:Soph Duluth:46:40:69:38:66:25:25:ambitious:NA:bench:bench:bench:bench:0:0:0:0:0:Silicon Valley:0:0:NA
+roster-player:Rufus Sweney:42:44:50:61:66:15:15:reactive:NA:fteam:skirmisher:skirmisher:skirmisher:0:0:0:0:0:Hollywood:0:0:NA
+roster-player:Mordecai Turku:60:47:47:80:62:14:14:reactive:NA:fteam:skirmisher:skirmisher:skirmisher:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Jonny Plante:43:65:60:68:61:17:17:eager:NA:fteam:skirmisher:guard:guard:0:0:0:0:0:Boston:0:0:NA
+roster-player:Butch Blitz:59:49:57:40:54:20:20:reactive:NA:fteam:skirmisher:guard:guard:0:0:0:0:0:Cleveland:0:0:NA
+#PROSPECTS 
