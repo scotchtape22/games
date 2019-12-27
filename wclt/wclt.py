@@ -452,7 +452,6 @@ a_gamecost = 0
 h_gamecost = 0
 
 if h_team["points"] > a_team["points"]:
-	print("Home team wins!")
 	h_cashrolls = 20+h_team["Lights"]
 
 	if h_team["Marketeer"] != -1:
@@ -486,7 +485,6 @@ if h_team["points"] > a_team["points"]:
 		a_cashtot = a_cashrolls * random.randint(1,12)
 
 elif h_team["points"] < a_team["points"]:
-	print("Away team wins!")
 	h_cashrolls = h_team["Lights"]
 
 	if h_team["Marketeer"] != -1:
@@ -520,7 +518,6 @@ elif h_team["points"] < a_team["points"]:
 		a_cashtot = a_cashrolls * random.randint(1,12)
 # Else tie
 else:
-	print("How da fuck did you tie?!?!")
 	h_cashrolls = h_team["Lights"]
 
 	if h_team["Marketeer"] != -1:
@@ -571,8 +568,8 @@ else:
 a_net = int(a_cashtot) - int(a_gamecost)
 h_net = int(h_cashtot) - int(h_gamecost)
 
-game_log("The away team earned "+str(a_net),"t",0)
-game_log("The home team earned "+str(h_net),"t",0)
+game_log("The away team earned "+str(a_net),"l",0)
+game_log("The home team earned "+str(h_net),"l",0)
 
 
 # Level Ups
@@ -658,6 +655,9 @@ for p in all_players:
 	p["inj"] = p["inj"] + total_in
 
 #Save Question?
+sv_choice = input("Save Results?(Y/n): ")
+if sv_choice == "Y":
+	print("No saving yet!")
 #Add to all time stats?
 a_load.close()
 h_load.close()
