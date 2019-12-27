@@ -1,0 +1,25 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Toronto Freeze
+treasure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Mario Arbor:49:59:47:46:69:29:29:ambitious:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Chicago:0:0:NA
+roster-player:Jeremy River:63:42:55:78:47:27:27:eager:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Mexico City:0:0:NA
+roster-player:Phinneas Mac:45:53:57:54:70:25:25:ambitious:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Portland:0:0:NA
+roster-player:Igor Calhammer:68:67:50:47:69:21:21:reactive:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Vancouver:0:0:NA
+roster-player:Garth Beefcake:51:60:58:74:69:14:14:stoic:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Chicago:0:0:NA
+roster-player:Squid Roy:60:49:59:33:43:29:29:stoic:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Mexico City:0:0:NA
+roster-player:Cheech Charelston:53:55:70:66:66:12:12:reactive:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Robin Vanderhuge:58:44:61:36:51:16:16:stoic:NA:steal:steal:steal:steal:0:0:0:0:0:0:Hollywood:0:0:NA
+roster-player:Rufus Fedorchek:56:54:49:50:59:14:14:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Robert Hall:42:42:66:76:58:12:12:stoic:NA:bench:bench:bench:bench:0:0:0:0:0:0:Montreal:0:0:NA
+roster-player:Sarge Wyld:46:68:53:52:52:16:16:ambitious:NA:bench:bench:bench:bench:0:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Sergei Hamilton:51:56:61:33:59:19:19:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Duluth:0:0:NA
+#PROSPECTS

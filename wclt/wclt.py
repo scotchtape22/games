@@ -9,7 +9,6 @@ from operator import itemgetter
 def die_roll(chk,player,team):
 	the_roll = random.randint(0,99)
 	#Debug log roll
-	game_log(player['name']+" rolled a "+str(the_roll)+" for "+chk,"l",0)
 	if chk == "int":
 		the_result = player["s_int"] - the_roll
 		if player["drug"] == "cocaine":
@@ -71,15 +70,16 @@ def die_roll(chk,player,team):
 		the_result = the_result - 50
 	#If 90+, a light was generated
 	if the_result > 89 and chk != "pot" and chk != "fit":
-		game_log(player["name"]+" made a highlighut play!","l",0)
+		game_log(player["name"]+" made a highlight play!","l",0)
 		team["Lights"] = team["Lights"] + 1
-	#50+ earns exp, -25 earns fatigute
+	#50+ earns exp, -50 earns fatigute
 	if the_result > 49 and chk != "pot" and chk != "fit":
 		game_log(player["name"]+" learned something!","l",0)
 		player["exp"] = player["exp"] + 1
-	elif the_result < -25 and chk != "pot" and chk != "fit":
+	elif the_result < -49 and chk != "pot" and chk != "fit":
 		game_log(player["name"]+" may have injured himself!","l",0)
 		player["fat"] = player["fat"] + 1
+	game_log(player['name']+" rolled a "+str(the_result)+" for "+chk,"l",0)
 	return the_result
 
 
@@ -91,19 +91,19 @@ def game_log(msg,tier,d_flag):
 		print(msg)
 		time.sleep(1)
 		l_load = open("game_log.txt","a")
-		l_load.write(msg)
+		l_load.write(msg+"\n")
 		l_load.close()	
 		return
 	elif tier == 'l':
 		l_load = open("game_log.txt","a")
-		l_load.write(msg)
+		l_load.write(msg+"\n")
 		l_load.close()
 		return
 	elif tier == 'd':
 		if d_flag == 1:
 			print(msg)
 			l_load = open("game_debug.txt","a")
-			l_load.write(msg)
+			l_load.write(msg+"\n")
 			l_load.close()
 		return
 
@@ -143,7 +143,8 @@ for x in h_load:
 		"r_init":0,"r_shts":0,"r_hit":0,
 		"c_pos":"","w_pos":xi[11],"sw_pos":xi[12],"l_pos":xi[13],"sl_pos":xi[14],
 		"exp":0,"fat":0,
-		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[21])}
+		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
+		"c_ht":int(xi[16]),"c_ph":int(xi[17]),"c_fc":int(xi[18]),"c_st":int(xi[19]),"c_rd":int(xi[20])}
 		all_players.append(new_player)
 
 #Load Away Team
@@ -178,7 +179,8 @@ for x in a_load:
 		"r_init":0,"r_shts":0,"r_hit":0,
 		"c_pos":"","w_pos":xi[11],"sw_pos":xi[12],"l_pos":xi[13],"sl_pos":xi[14],
 		"exp":0,"fat":0,
-		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[21])}
+		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
+		"c_ht":int(xi[16]),"c_ph":int(xi[17]),"c_fc":int(xi[18]),"c_st":int(xi[19]),"c_rd":int(xi[20])}
 		all_players.append(new_player)
 #Be sure to close files at the end
 
@@ -186,7 +188,7 @@ for x in a_load:
 clock = 1
 game_log("Match Begins!","t",0)
 
-while clock < 41:
+while clock < 11:
 	#Figure out the game state and set the actions and reset round info
 	if a_team["points"]+10 < h_team["points"]:
 		for p in all_players:
@@ -626,8 +628,7 @@ for p in all_players:
 			game_log(p["name"]+" leveled up knowledge!","l",0)
 		lurs = lurs - 1
 
-#Injuries?
-
+#Injuries
 for p in all_players:
 	inrc = 0
 	if p["team"] == "home":
@@ -654,10 +655,55 @@ for p in all_players:
 	game_log(p["name"] + " is injured for "+str(total_in)+" games","l",0)
 	p["inj"] = p["inj"] + total_in
 
+#Stats
+for p in all_players:
+	p["c_ht"] = p["c_ht"] + p["g_ht"]
+	p["c_ph"] = p["c_ph"] + p["g_ph"]
+	p["c_fc"] = p["c_fc"] + p["g_fc"]
+	p["c_st"] = p["c_st"] + p["g_st"]
+	p["c_rd"] = p["c_rd"] + p["g_rd"]
+
 #Save Question?
-sv_choice = input("Save Results?(Y/n): ")
-if sv_choice == "Y":
-	print("No saving yet!")
-#Add to all time stats?
 a_load.close()
 h_load.close()
+sv_choice = input("Save Results?(Y/n): ")
+if sv_choice == "Y":
+	h_load = open(h_path,"r")
+	h_data = h_load.readlines()
+	h_load.close()
+	h_load = open(h_path,"w")
+	for x in h_data:
+		xi = x.split(":")
+		if xi[0] == "treasure":
+			new_treasure = int(xi[1]) + h_net
+			new_line = "tresaure:"+str(new_treasure)
+			h_load.write(new_line)
+		if xi[0] == "roster-player":
+			#Find the player in all players that matches
+			for p in all_players:
+				if p["name"] == xi[1] and p["team"] == "home":
+					updated_player = "roster-player:"+p["name"]+":"+str(p["s_int"])+":"+str(p["s_acc"])+":"+str(p["s_eva"])+":"+str(p["s_pot"])+":"+str(p["s_fit"])+":"+str(p["s_ego"])+":"+str(p["s_kno"])+":"+p["per"]+":"+xi[10]+":"+xi[11]+":"+xi[12]+":"+xi[13]+":"+xi[14]+":"+str(p["inj"])+":"+str(p["c_ht"])+":"+str(p["c_ph"])+":"+str(p["c_fc"])+":"+str(p["c_st"])+":"+str(p["c_rd"])+":"+xi[21]+":"+xi[22]+":"+xi[23]+":"+xi[24]
+					h_load.write(updated_player)
+
+		else:
+			h_load.write(x)
+
+	a_load = open(a_path,"r")
+	a_data = a_load.readlines()
+	a_load.close()
+	a_load = open(a_path,"w")
+	for x in a_data:
+		xi = x.split(":")
+		if xi[0] == "treasure":
+			new_treasure = int(xi[1]) + a_net
+			new_line = "tresaure:"+str(new_treasure)
+			a_load.write(new_line)
+		if xi[0] == "roster-player":
+			#Find the player in all players that matches
+			for p in all_players:
+				if p["name"] == xi[1] and p["team"] == "away":
+					updated_player = "roster-player:"+p["name"]+":"+str(p["s_int"])+":"+str(p["s_acc"])+":"+str(p["s_eva"])+":"+str(p["s_pot"])+":"+str(p["s_fit"])+":"+str(p["s_ego"])+":"+str(p["s_kno"])+":"+p["per"]+":"+xi[10]+":"+xi[11]+":"+xi[12]+":"+xi[13]+":"+xi[14]+":"+str(p["inj"])+":"+str(p["c_ht"])+":"+str(p["c_ph"])+":"+str(p["c_fc"])+":"+str(p["c_st"])+":"+str(p["c_rd"])+":"+xi[21]+":"+xi[22]+":"+xi[23]+":"+xi[24]
+					a_load.write(updated_player)
+
+		else:
+			a_load.write(x)

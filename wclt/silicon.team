@@ -1,0 +1,25 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Silicon Valley L33t
+treasure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Mordecai Sully:43:46:48:53:68:30:30:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Qubec City:0:0:NA
+roster-player:Christoff Ortega:61:45:69:65:45:11:11:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Cleveland:0:0:NA
+roster-player:Phinneas Allegheny:54:43:49:45:68:13:13:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Portland:0:0:NA
+roster-player:William Muskeegon:67:68:67:80:67:10:10:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Lazer Sherpa:70:49:67:59:54:26:26:ambitious:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Detroit:0:0:NA
+roster-player:CJ Llopis:64:63:65:78:44:16:16:stoic:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Chicago:0:0:NA
+roster-player:Knack Dawson:44:54:64:55:43:24:24:stoic:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Portland:0:0:NA
+roster-player:Manly Essen:53:65:70:74:65:29:29:ambitious:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Boston:0:0:NA
+roster-player:Beef Mariucci:69:64:62:35:59:19:19:aggressive:NA:steal:steal:steal:steal:0:0:0:0:0:0:Portland:0:0:NA
+roster-player:Sergei St.Paul:40:54:60:66:52:12:12:eager:NA:steal:steal:steal:steal:0:0:0:0:0:0:Champagn:0:0:NA
+roster-player:Austin 85:40:40:56:36:48:20:20:stoic:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:0:Seattle:0:0:NA
+roster-player:Butch Cloquet:43:48:56:53:61:30:30:reactive:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:0:Toledo:0:0:NA
+#PROSPECTS

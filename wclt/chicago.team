@@ -1,0 +1,25 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Chicago Gunners
+treasure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Dirk Ashland:63:48:64:31:58:23:23:stoic:NA:guard:guard:guard:guard:0:0:0:0:0:0:Silicon Valley:0:0:NA
+roster-player:Isaac Temple:67:55:50:54:45:24:24:reactive:NA:guard:guard:guard:guard:0:0:0:0:0:0:St.Paul:0:0:NA
+roster-player:Dirk Parks:67:62:55:54:64:30:30:reactive:NA:guard:guard:guard:guard:0:0:0:0:0:0:Miami:0:0:NA
+roster-player:Cheech Mccrosscheq:66:69:54:37:65:23:23:aggressive:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Minneapolis:0:0:NA
+roster-player:Jeremy Mariucci:41:58:48:55:47:11:11:eager:NA:fteam:fteam:fteam:fteam:0:0:0:0:0:0:Miami:0:0:NA
+roster-player:Lucky Ashland:51:41:43:71:47:22:22:reactive:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:0:New Orleans:0:0:NA
+roster-player:Soph McTravis:57:46:45:42:45:15:15:eager:NA:bench:bench:bench:bench:0:0:0:0:0:0:St.Paul:0:0:NA
+roster-player:Dipper Ontanogan:48:47:66:34:57:23:23:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Toledo:0:0:NA
+roster-player:Flash Cooles:70:44:44:55:43:14:14:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Miami:0:0:NA
+roster-player:Dimitri Abney:64:40:47:71:42:10:10:stoic:NA:ambush:ambush:bench:bench:0:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Robert Sudbury:59:63:40:49:68:30:30:eager:NA:bench:bench:steal:steal:0:0:0:0:0:0:New Orleans:0:0:NA
+roster-player:Guy Duluth:56:69:50:32:49:28:28:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Duluth:0:0:NA
+#PROSPECTS
