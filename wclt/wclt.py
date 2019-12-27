@@ -85,7 +85,7 @@ def die_roll(chk,player,team):
 
 def game_log(msg,tier,d_flag):
 	#Will write to a file eventually
-	#Tiers: d - debug,l - log only, t - terminal and log
+	#Tiers: d - debug,l - log only, t - terminal and log, f - format (screen only)
 	#Don't show die rolls to screen?
 	if tier == 't':
 		print(msg)
@@ -105,6 +105,9 @@ def game_log(msg,tier,d_flag):
 			l_load = open("game_debug.txt","a")
 			l_load.write(msg+"\n")
 			l_load.close()
+	elif tier == 'f':
+		print(msg)
+		time.sleep(1)	
 		return
 
 
@@ -188,7 +191,7 @@ for x in a_load:
 clock = 1
 game_log("Match Begins!","t",0)
 
-while clock < 11:
+while clock < 41:
 	#Figure out the game state and set the actions and reset round info
 	if a_team["points"]+10 < h_team["points"]:
 		for p in all_players:
@@ -307,6 +310,7 @@ while clock < 11:
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								all_players[active]["g_ht"] = all_players[active]["g_ht"] + 1
 								stealing = 0
+								break
 						elif ambu["team"] == "away":
 							ambush = die_roll("acc",ambu,a_team)
 							dodge = die_roll("eva",all_players[active],h_team)
@@ -316,6 +320,7 @@ while clock < 11:
 								all_players[active]["g_ht"] = all_players[active]["g_ht"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								stealing = 0
+								break
 				#If unhit, steal!
 				if stealing == 1:
 					game_log(all_players[active]["name"]+" has stolen the enemy flag and ended the round!","t",0)
@@ -393,9 +398,11 @@ while clock < 11:
 
 		#If not 
 	#Clock Advance
+	game_log("==============================","f",0)
 	game_log("end of round "+str(clock),"t",0)
-	game_log("Home: "+str(h_team["points"]),"t",0)
-	game_log("Away: "+str(a_team["points"]),"t",0)
+	game_log(h_team["name"]+": "+str(h_team["points"]),"t",0)
+	game_log(a_team["name"]+": "+str(a_team["points"]),"t",0)
+	game_log("==============================","f",0)
 	clock = clock + 1
 
 
@@ -403,9 +410,12 @@ while clock < 11:
 #################END OF GAME#################
 
 #Final
+game_log("==============================","f",0)
 game_log("FINAL SCORE:","t",0)
 game_log(h_team["name"]+": "+str(h_team["points"]),"t",0)
 game_log(a_team["name"]+": "+str(a_team["points"]),"t",0)
+game_log("==============================","f",0)
+
 
 #Sort players for better stat view
 #Stats
@@ -610,26 +620,40 @@ for p in all_players:
 		this_lvl = random.choice(lu_set)
 		if this_lvl == "int":
 			p["s_int"] = p["s_int"] + 1
+			if p["s_int"] > 99:
+				p["s_int"] = 99
 			game_log(p["name"]+" leveled up initiative!","l",0)
 		elif this_lvl == "acc":
 			p["s_acc"] = p["s_acc"] + 1
+			if p["s_acc"] > 99:
+				p["s_acc"] = 99
 			game_log(p["name"]+" leveled up accuracy!","l",0)
 		elif this_lvl == "eva":
 			p["s_eva"] = p["s_eva"] + 1
+			if p["s_eva"] > 99:
+				p["s_eva"] = 99
 			game_log(p["name"]+" leveled up evasion!","l",0)
 		elif this_lvl == "fit":
 			p["s_fit"] = p["s_fit"] + 1
+			if p["s_fit"] > 99:
+				p["s_fit"] = 99
 			game_log(p["name"]+" leveled up fitness!","l",0)
 		elif this_lvl == "ego":
 			p["s_ego"] = p["s_ego"] + 1
+			if p["s_ego"] > 99:
+				p["s_ego"] = 99
 			game_log(p["name"]+" leveled up ego!","l",0)
 		elif this_lvl == "kno":
 			p["s_kno"] = p["s_kno"] + 1
+			if p["s_kno"] > 99:
+				p["s_kno"] = 99
 			game_log(p["name"]+" leveled up knowledge!","l",0)
 		lurs = lurs - 1
 
 #Injuries
 for p in all_players:
+	continue
+	#THIS IS TO STOP IT FOR TESTING! RENABLE THIS LATER!
 	inrc = 0
 	if p["team"] == "home":
 		inrk = p["fat"]

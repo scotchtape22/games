@@ -3,22 +3,22 @@
 # Will be replaced by a database
 # Delimiter is ':'
 name:Milwaukee PBRmy
-treasure:0
+tresaure:3treasure:0
 #COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
 medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 stadium:0:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Soph Kim:45:41:46:76:50:18:18:aggressive:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:0:Chicago:0:0:NA
-roster-player:Dic Mississauga:53:40:53:43:44:22:22:stoic:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:0:Vera Cruz:0:0:NA
-roster-player:William Hancock:40:44:62:52:48:18:18:ambitious:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:0:Duluth:0:0:NA
-roster-player:Chong Fargo:65:57:44:35:42:25:25:reactive:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:0:Montreal:0:0:NA
-roster-player:Dimitri MeOuch:44:69:50:42:48:26:26:stoic:NA:steal:steal:steal:steal:0:0:0:0:0:0:Vancouver:0:0:NA
-roster-player:no-name McMan:57:60:41:40:60:22:22:reactive:NA:steal:steal:steal:steal:0:0:0:0:0:0:Toronto:0:0:NA
-roster-player:Garth Black:47:58:41:47:40:14:14:aggressive:NA:bench:bench:fteam:fteam:0:0:0:0:0:0:Havanna:0:0:NA
-roster-player:Captain Thrash:64:43:58:39:54:18:18:reactive:NA:bench:bench:fteam:fteam:0:0:0:0:0:0:Minneapolis:0:0:NA
-roster-player:Bert Superior:54:51:68:70:69:23:23:reactive:NA:steal:steal:bench:bench:0:0:0:0:0:0:Roswell:0:0:NA
-roster-player:William Fargo:41:55:49:79:55:10:10:ambitious:NA:ambush:ambush:bench:bench:0:0:0:0:0:0:Duluth:0:0:NA
+roster-player:Soph Kim:45:41:46:76:50:18:18:aggressive:NA:ambush:ambush:ambush:ambush:0:7:10:0:42:40:Chicago:0:0:NA
+roster-player:Dic Mississauga:53:40:53:43:44:22:22:stoic:NA:battleline:battleline:battleline:battleline:0:5:3:0:9:40:Vera Cruz:0:0:NA
+roster-player:William Hancock:40:44:62:52:48:18:18:ambitious:NA:battleline:battleline:battleline:battleline:0:5:5:0:12:40:Duluth:0:0:NA
+roster-player:Chong Fargo:65:57:44:35:42:25:25:reactive:NA:battleline:battleline:battleline:battleline:0:0:9:0:1:40:Montreal:0:0:NA
+roster-player:Dimitri MeOuch:44:69:50:42:48:26:26:stoic:NA:steal:steal:steal:steal:0:6:0:5:8:40:Vancouver:0:0:NA
+roster-player:no-name McMan:57:60:41:40:60:22:22:reactive:NA:steal:steal:steal:steal:0:10:0:9:4:40:Toronto:0:0:NA
+roster-player:Garth Black:47:58:41:47:40:14:14:aggressive:NA:bench:bench:fteam:fteam:0:2:6:0:8:39:Havanna:0:0:NA
+roster-player:Captain Thrash:64:43:58:39:54:18:18:reactive:NA:bench:bench:fteam:fteam:0:0:5:0:1:39:Minneapolis:0:0:NA
+roster-player:Bert Superior:54:51:68:70:69:23:23:reactive:NA:steal:steal:bench:bench:0:0:0:0:0:1:Roswell:0:0:NA
+roster-player:William Fargo:41:55:49:79:55:10:10:ambitious:NA:ambush:ambush:bench:bench:0:0:0:0:2:1:Duluth:0:0:NA
 roster-player:Jeremy Allegheny:41:53:64:56:52:13:13:ambitious:NA:bench:bench:bench:bench:0:0:0:0:0:0:New Orleans:0:0:NA
 #PROSPECTS
