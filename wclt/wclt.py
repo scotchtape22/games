@@ -90,19 +90,19 @@ def game_log(msg,tier,d_flag):
 	if tier == 't':
 		print(msg)
 		time.sleep(1)
-		l_load = open("game_log.txt","w+")
+		l_load = open("game_log.txt","a")
 		l_load.write(msg)
 		l_load.close()	
 		return
 	elif tier == 'l':
-		l_load = open("game_log.txt","w+")
+		l_load = open("game_log.txt","a")
 		l_load.write(msg)
 		l_load.close()
 		return
 	elif tier == 'd':
 		if d_flag == 1:
 			print(msg)
-			l_load = open("game_debug.txt","w+")
+			l_load = open("game_debug.txt","a")
 			l_load.write(msg)
 			l_load.close()
 		return
@@ -120,20 +120,22 @@ h_load = open(h_path,"r+")
 for x in h_load:
 	xi = x.split(':')
 	if xi[0] == "medic":
-		h_team["Medical"] = xi[8]
+		h_team["Medical"] = int(xi[8])
 		h_team["Coach_Cost"] = h_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "mentor":
-		h_team["Mentor"] = xi[8]
+		h_team["Mentor"] = int(xi[8])
 		h_team["Coach_Cost"] = h_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "marketeer":
-		h_team["Markteer"] = xi[8]
+		h_team["Markteer"] = int(xi[8])
 		h_team["Coach_Cost"] = h_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "medic":
-		h_team["Medical"] = xi[8]
+		h_team["Medical"] = int(xi[8])
 		h_team["Coach_Cost"] = h_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "stadium":
-		h_team["Fan_Exp"] = xi[1]
-		h_team["Fan_Cap"] = xi[2]
+		h_team["Fan_Exp"] = int(xi[1])
+		h_team["Fan_Cap"] = int(xi[2])
+	elif xi[0] == "name":
+		h_team["name"] = xi[1].rstrip()
 	elif xi[0] == "roster-player":
 		new_player={"name":xi[1],"team":"home",
 		"s_int":int(xi[2]),"s_acc":int(xi[3]),"s_eva":int(xi[4]),"s_pot":int(xi[5]),"s_fit":int(xi[6]),"s_ego":int(xi[7]),"s_kno":int(xi[8]),
@@ -145,7 +147,7 @@ for x in h_load:
 		all_players.append(new_player)
 
 #Load Away Team
-a_team={"name":"hometeam","points":0,"Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0}
+a_team={"name":"awayteam","points":0,"Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0}
 #Load Players
 a_path = input("Away Team File: ")
 a_load = open(a_path,"r+")
@@ -153,20 +155,22 @@ a_load = open(a_path,"r+")
 for x in a_load:
 	xi = x.split(':')
 	if xi[0] == "medic":
-		a_team["Medical"] = xi[8]
+		a_team["Medical"] = int(xi[8])
 		a_team["Coach_Cost"] = a_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "mentor":
-		a_team["Mentor"] = xi[8]
+		a_team["Mentor"] = int(xi[8])
 		a_team["Coach_Cost"] = a_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "marketeer":
-		a_team["Markteer"] = xi[8]
+		a_team["Markteer"] = int(xi[8])
 		a_team["Coach_Cost"] = a_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "medic":
-		a_team["Medical"] = xi[8]
+		a_team["Medical"] = int(xi[8])
 		a_team["Coach_Cost"] = a_team["Coach_Cost"] + int(xi[10])
 	elif xi[0] == "stadium":
-		a_team["Fan_Exp"] = xi[1]
-		a_team["Fan_Cap"] = xi[2]
+		a_team["Fan_Exp"] = int(xi[1])
+		a_team["Fan_Cap"] = int(xi[2])
+	elif xi[0] == "name":
+		a_team["name"] = xi[1].rstrip()
 	elif xi[0] == "roster-player":
 		new_player={"name":xi[1],"team":"away",
 		"s_int":int(xi[2]),"s_acc":int(xi[3]),"s_eva":int(xi[4]),"s_pot":int(xi[5]),"s_fit":int(xi[6]),"s_ego":int(xi[7]),"s_kno":int(xi[8]),
@@ -299,13 +303,15 @@ while clock < 41:
 								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t",0)
 								h_team["points"] = h_team["points"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
+								all_players[active]["g_ht"] = all_players[active]["g_ht"] + 1
 								stealing = 0
 						elif ambu["team"] == "away":
 							ambush = die_roll("acc",ambu,a_team)
-							dodge = die_roll("eva",all_players[active],t_team)
+							dodge = die_roll("eva",all_players[active],h_team)
 							if ambush > dodge:
 								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t",0)
 								a_team["points"] = a_team["points"] + 1
+								all_players[active]["g_ht"] = all_players[active]["g_ht"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								stealing = 0
 				#If unhit, steal!
@@ -335,6 +341,7 @@ while clock < 41:
 								h_team["points"] = h_team["points"] + 1
 								all_players[active]["g_ph"] = all_players[active]["g_ph"] + 1
 								all_players[target]["r_hit"] = 1
+								all_players[target]["g_ht"] = all_players[target]["g_ht"] + 1
 								break
 							else:
 								game_log(all_players[active]["name"]+" misses "+all_players[target]["name"]+"!","t",0)								
@@ -347,6 +354,7 @@ while clock < 41:
 								a_team["points"] = a_team["points"] + 1
 								all_players[active]["g_ph"] = all_players[active]["g_ph"] + 1
 								all_players[target]["r_hit"] = 1
+								all_players[target]["g_ht"] = all_players[target]["g_ht"] + 1
 								break
 							else:
 								game_log(all_players[active]["name"]+" misses "+all_players[target]["name"]+"!","t",0)								
@@ -394,21 +402,34 @@ while clock < 41:
 
 #Final
 game_log("FINAL SCORE:","t",0)
-game_log("Home: "+str(h_team["points"]),"t",0)
-game_log("Away: "+str(a_team["points"]),"t",0)
+game_log(h_team["name"]+": "+str(h_team["points"]),"t",0)
+game_log(a_team["name"]+": "+str(a_team["points"]),"t",0)
 
 #Sort players for better stat view
 #Stats
-game_log("FINAL STATS:","t",0)
-game_log("Player\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t",0)
+game_log("FINAL STATS - "+h_team["name"]+":","t",0)
+game_log("Player\t\t\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t",0)
 for p in all_players:
-	try:
-		sp = p["g_ph"]/p["g_st"]
-	except:
-		sp = "NA"
-	pp = p["g_ph"]+(p["g_fc"]*4)
-	ppm = p["g_ht"]+(p["g_fc"]*4)
-	game_log(p["name"]+":\t"+str(p["g_ph"])+"\t"+str(p["g_st"])+"\t"+str(p["g_fc"])+"\t"+sp+"\t"+pp+"\t"+str(p["g_ht"])+"\t"+ppm,"t",0)
+	if p['team'] == "home":
+		try:
+			sp = p["g_ph"]/p["g_st"]
+		except:
+			sp = "NA"
+		pp = p["g_ph"]+(p["g_fc"]*4)
+		ppm = pp - p["g_ht"]
+		game_log(p["name"]+":\t\t"+str(p["g_ph"])+"\t"+str(p["g_st"])+"\t"+str(p["g_fc"])+"\t"+str(sp)+"\t"+str(pp)+"\t"+str(p["g_ht"])+"\t"+str(ppm),"t",0)
+
+game_log("FINAL STATS - "+a_team["name"]+":","t",0)
+game_log("Player\t\t\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t",0)
+for p in all_players:
+	if p['team'] == "away":
+		try:
+			sp = p["g_ph"]/p["g_st"]
+		except:
+			sp = "NA"
+		pp = p["g_ph"]+(p["g_fc"]*4)
+		ppm = pp - p["g_ht"]
+		game_log(p["name"]+":\t\t"+str(p["g_ph"])+"\t"+str(p["g_st"])+"\t"+str(p["g_fc"])+"\t"+str(sp)+"\t"+str(pp)+"\t"+str(p["g_ht"])+"\t"+str(ppm),"t",0)
 
 # Money Earned
 # Roll for gaining credits
@@ -424,7 +445,14 @@ for p in all_players:
 # Sum is the amount of credits earned
 # Fan experience denotes a minimum level earned
 # Pay players, staff, facilities, and drugs used
+
+a_cashtot = 0
+h_cashtot = 0
+a_gamecost = 0
+h_gamecost = 0
+
 if h_team["points"] > a_team["points"]:
+	print("Home team wins!")
 	h_cashrolls = 20+h_team["Lights"]
 
 	if h_team["Marketeer"] != -1:
@@ -458,6 +486,7 @@ if h_team["points"] > a_team["points"]:
 		a_cashtot = a_cashrolls * random.randint(1,12)
 
 elif h_team["points"] < a_team["points"]:
+	print("Away team wins!")
 	h_cashrolls = h_team["Lights"]
 
 	if h_team["Marketeer"] != -1:
@@ -491,6 +520,7 @@ elif h_team["points"] < a_team["points"]:
 		a_cashtot = a_cashrolls * random.randint(1,12)
 # Else tie
 else:
+	print("How da fuck did you tie?!?!")
 	h_cashrolls = h_team["Lights"]
 
 	if h_team["Marketeer"] != -1:
@@ -529,24 +559,24 @@ else:
 	h_gamecost = h_team["Coach_Cost"]
 	for p in all_players:
 		if p["team"] == "home":
-			h_gamecost = h_gamecost + p["g_cost"]
+			h_gamecost = h_gamecost + int(p["g_cost"])
 			if p["drug"] != "none":
 				h_gamecost = h_gamecost + 1000
 		if p["team"] == "away":
-			a_gamecost = a_gamecost + p["g_cost"]
+			a_gamecost = a_gamecost + int(p["g_cost"])
 			if p["drug"] != "none":
 				a_gamecost = a_gamecost + 1000
 
 #Net totals
-a_net = a_cashtot - a_gamecost
-h_net = h_cashtot - h_gamecost
+a_net = int(a_cashtot) - int(a_gamecost)
+h_net = int(h_cashtot) - int(h_gamecost)
 
-game_log("The away team earned "+a_net,"l",0)
-game_log("The home team earned "+h_net,"l",0)
+game_log("The away team earned "+str(a_net),"t",0)
+game_log("The home team earned "+str(h_net),"t",0)
 
 
 # Level Ups
-for p in players:
+for p in all_players:
 	lurs = 0
 	if p["team"] == "home":
 		luas = p["exp"]
@@ -599,8 +629,9 @@ for p in players:
 			game_log(p["name"]+" leveled up knowledge!","l",0)
 		lurs = lurs - 1
 
-#Injuries
-for p in players:
+#Injuries?
+
+for p in all_players:
 	inrc = 0
 	if p["team"] == "home":
 		inrk = p["fat"]
@@ -623,10 +654,10 @@ for p in players:
 		#Roll assuming D10 for now
 		total_in = total_in + random.randint(1,10)
 		inrc = inrc - 1
-	game_log(p["name"] + " is injured for "+total_in+" games","l",0)
+	game_log(p["name"] + " is injured for "+str(total_in)+" games","l",0)
 	p["inj"] = p["inj"] + total_in
 
-#Save
+#Save Question?
 #Add to all time stats?
 a_load.close()
 h_load.close()

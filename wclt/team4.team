@@ -1,0 +1,24 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:NY SPEED
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Dipper Young:57:69:59:57:42:24:24:eager:cocaine:skirmisher:skirmisher:skirmisher:skirmisher:0:0:0:0:0:Brooklyn:0:0:NA
+roster-player:Rufus Whitehall:65:57:45:77:57:21:21:aggressive:cocaine:skirmisher:skirmisher:skirmisher:skirmisher:0:0:0:0:0:Milwaukee:0:0:NA
+roster-player:Mordecai Bozeman:68:42:41:76:41:18:18:eager:cocaine:skirmisher:skirmisher:skirmisher:skirmisher:0:0:0:0:0:Chicago:0:0:NA
+roster-player:Paul Two-Point-0:46:40:53:70:41:30:30:reactive:cocaine:skirmisher:skirmisher:skirmisher:skirmisher:0:0:0:0:0:Silicon Valley:0:0:NA
+roster-player:Dustin Dogmeat:41:68:47:58:43:21:21:aggressive:cocaine:skirmisher:skirmisher:skirmisher:steal:0:0:0:0:0:Toronto:0:0:NA
+roster-player:Cheech Deadlift:57:42:44:77:46:23:23:reactive:na:ambush:ambush:steal:steal:0:0:0:0:0:Toronto:0:0:NA
+roster-player:Jonny Henrei:50:40:42:77:41:10:10:eager:NA:steal:steal:steal:steal:0:0:0:0:0:Roswell:0:0:NA
+roster-player:Skip Booteh:58:58:68:78:65:24:24:eager:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:Qubec City:0:0:NA
+roster-player:Chong Henrei:58:43:42:65:42:23:23:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:Roswell:0:0:NA
+roster-player:Jonny Mac:63:55:68:31:53:24:24:reactive:NA:bench:bench:bench:bench:0:0:0:0:0:Chicago:0:0:NA
+roster-player:Paul Parker:47:56:59:58:45:27:27:stoic:NA:bench:bench:bench:bench:0:0:0:0:0:Roswell:0:0:NA
+roster-player:Phinneas Cox:43:49:59:79:58:15:15:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:Atlanta:0:0:NA
+#PROSPECTS

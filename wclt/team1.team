@@ -2,11 +2,12 @@
 # To Comment
 # Will be replaced by a database
 # Delimiter is ':'
-name my_team
+name:Minnesota nICE
 #COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
 medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
 roster-player:Sarge Moser:41:52:50:77:66:11:11:ambitious:NA:ambush:ambush:ambush:ambush:0:0:0:0:0:Atlanta:0:0:NA
 roster-player:Sanic James:53:68:63:75:59:22:22:ambitious:NA:battleline:battleline:battleline:battleline:0:0:0:0:0:Toledo:0:0:NA
