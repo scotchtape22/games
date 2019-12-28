@@ -10,15 +10,15 @@ mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 stadium:0:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Mario Sudbury:63:60:54:71:46:24:24:aggressive:NA:guard:guard:skirmisher:skirmisher:0:10:6:0:21:40:Toronto:0:0:NA
-roster-player:Slab Burre:53:47:64:57:43:18:18:stoic:NA:guard:guard:skirmisher:skirmisher:0:19:4:0:40:40:Vancouver:0:0:NA
-roster-player:Billy Two-Point-0:67:45:60:61:54:28:27:aggressive:NA:guard:guard:skirmisher:skirmisher:0:10:11:0:25:40:Minneapolis:0:0:NA
-roster-player:Jonny Mann:69:64:40:80:66:18:18:eager:NA:guard:guard:skirmisher:skirmisher:0:7:13:0:10:40:Champagn:0:0:NA
-roster-player:Yooper Niagara:65:49:43:51:41:24:24:reactive:NA:ambush:ambush:ambush:ambush:0:9:11:0:37:40:Cleveland:0:0:NA
-roster-player:Vlad Parks:53:52:55:43:40:13:13:aggressive:NA:ambush:ambush:ambush:ambush:0:13:6:0:41:40:Duluth:0:0:NA
-roster-player:Bert McTravis:45:60:43:55:49:29:29:reactive:NA:fteam:fteam:steal:steal:0:22:2:7:21:40:Champagn:0:0:NA
-roster-player:Peter Beefboi:70:55:66:77:64:14:14:reactive:NA:fteam:fteam:bench:bench:0:3:4:0:12:7:Portland:0:0:NA
-roster-player:Flash Cox:56:67:60:51:66:12:11:ambitious:NA:bench:bench:steal:steal:0:18:0:12:14:33:Vancouver:0:0:NA
+roster-player:Mario Sudbury:63:60:54:71:46:24:24:aggressive:NA:guard:guard:skirmisher:skirmisher:0:18:28:0:35:120:Toronto:0:0:NA
+roster-player:Slab Burre:54:51:66:57:43:20:19:stoic:NA:guard:guard:skirmisher:skirmisher:0:30:22:0:59:120:Vancouver:0:0:NA
+roster-player:Billy Two-Point-0:73:46:60:61:58:29:29:aggressive:NA:guard:guard:skirmisher:skirmisher:0:13:30:0:32:120:Minneapolis:0:0:NA
+roster-player:Jonny Mann:69:65:43:80:66:18:19:eager:NA:guard:guard:skirmisher:skirmisher:0:13:43:0:17:120:Champagn:0:0:NA
+roster-player:Yooper Niagara:65:49:43:51:41:24:24:reactive:NA:ambush:ambush:ambush:ambush:0:14:59:0:154:120:Cleveland:0:0:NA
+roster-player:Vlad Parks:53:53:56:43:40:13:13:aggressive:NA:ambush:ambush:ambush:ambush:0:19:53:0:158:120:Duluth:0:0:NA
+roster-player:Bert McTravis:45:60:43:55:49:29:29:reactive:NA:fteam:fteam:steal:steal:0:43:12:12:31:120:Champagn:0:0:NA
+roster-player:Peter Beefboi:70:55:66:77:64:14:14:reactive:NA:fteam:fteam:bench:bench:0:3:19:0:12:41:Portland:0:0:NA
+roster-player:Flash Cox:56:67:61:51:67:15:11:ambitious:NA:bench:bench:steal:steal:0:42:0:23:27:79:Vancouver:0:0:NA
 roster-player:Benny Marshfield:45:51:69:64:62:14:14:ambitious:NA:bench:bench:bench:bench:0:0:0:0:0:0:New Orleans:0:0:NA
 roster-player:Slab Black:58:56:45:54:58:24:24:eager:NA:bench:bench:bench:bench:0:0:0:0:0:0:Toledo:0:0:NA
 roster-player:Dimitri Deadlift:43:57:54:61:41:23:23:eager:NA:bench:bench:bench:bench:0:0:0:0:0:0:Chicago:0:0:NA
