@@ -1,0 +1,110 @@
+CREATE TABLE leagues(
+league_name VARCHAR,
+commisionerID INT,
+size INT,
+rounds INT,
+format VARCHAR,
+playoffs INT,
+startdate DATE,
+deadline DATE,
+windowstart DATE,
+draftday DATE,
+fow CHAR(1));
+
+CREATE TABLE teams(
+team_id INT,
+team_name VARCHAR,
+team_pc INT,
+team_sc INT,
+team_lc INT,
+team_treasury INT,
+team_fanexp INT,
+team_fansize INT,
+team_coach INT,
+team_league INT,
+team_s_wins INT,
+team_s_losses INT,
+team_s_pf INT,
+team_s_pa INT,
+team_o_wins INT,
+team_o_losses INT,
+team_o_pf INT,
+team_o_pa INT
+);
+
+CREATE TABLE coaches(
+coach_id
+coach_name
+coach_email
+coach_pass
+coach_level
+);
+
+CREATE TABLE matches(
+team_1 INT,
+team_2 INT,
+team_1_s INT,
+team_2_s INT,
+league INT,
+match_time DATE,
+);
+
+CREATE TABLE players(
+playerID INT,
+leagueID INT,
+teamID INT,
+p_fname VARCHAR,
+p_lname VARCHAR,
+p_htown VARCHAR,
+p_persona ENUM('reactive','aggressive','communicative','ambitious','eager')
+p_age INT,
+p_con_status ENUM('retired','unsigned','contract-type')
+p_con_cost INT,
+p_con_length INT,
+
+p_status_ment ENUM('addiction','high','low'),
+p_status_inj INT,
+
+p_skill_acc INT,
+p_skill_eva INT,
+p_skill_int INT,
+p_skill_pot INT,
+p_skill_kno INT,
+p_skill_ego INT,
+
+p_plan_q1_fwin VARCHAR,
+p_plan_q1_swin VARCHAR,
+p_plan_q1_flos VARCHAR,
+p_plan_q1_slow VARCHAR,
+p_plan_q2_fwin VARCHAR,
+p_plan_q2_swin VARCHAR,
+p_plan_q2_flos VARCHAR,
+p_plan_q2_slow VARCHAR,
+p_plan_q3_fwin VARCHAR,
+p_plan_q3_swin VARCHAR,
+p_plan_q3_flos VARCHAR,
+p_plan_q3_slow VARCHAR,
+p_plan_q4_fwin VARCHAR,
+p_plan_q4_swin VARCHAR,
+p_plan_q4_flos VARCHAR,
+p_plan_q4_slow VARCHAR,
+p_plan_drug VARCHAR,
+p_plan_cont_var VARCHAR,
+p_plan_cont_thr INT,
+p_plan_cont_chg VARCHAR,
+
+p_stat_rp INT,
+p_stat_st INT,
+p_stat_eh INT,
+p_stat_ht INT,
+p_stat_fc INT
+
+);
+
+CREATE TABLE transactions(
+teamID INT,
+playerID INT,
+transactionType enum('contract','buyout','trade'),
+time DATE,
+acceptance enum('yes','undecided','no')
+);
