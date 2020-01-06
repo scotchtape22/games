@@ -338,7 +338,7 @@ while clock < 41:
 				while target > 0:
 					if all_players[target]["team"] != all_players[active]["team"] and all_players[target]["c_pos"] != "bench" and all_players[target]["r_hit"] == 0:
 						#Shoot at the target!
-						all_players[target]["g_st"] = all_players[target]["g_st"] + 1
+						all_players[active]["g_st"] = all_players[active]["g_st"] + 1
 						stealing = 0
 						if all_players[active]["team"] == "home":
 							attack = die_roll("acc",all_players[active],h_team)
