@@ -190,9 +190,11 @@ for x in a_load:
 
 clock = 1
 half = 1
+ot = 0
+# If this is a playoff game, change ot = 2
 game_log("Match Begins!","t",0)
 
-while clock <= 16 and half <=2:
+while (clock <= 16 and half <=2) or ot == 1:
 	#Choose tactics by building
 	
 
@@ -341,6 +343,20 @@ while clock <= 16 and half <=2:
 	game_log(a_team["name"]+": "+str(a_team["points"]),"t",0)
 	game_log("==============================","f",0)
 	clock = clock + 1
+
+	if clock == 17 and half == 1:
+		game_log("HALF TIME!","t",0)
+		half = 2
+	
+	#Code for overtime halfs would be good to.
+	if clock == 17 and half == 2 and ot == 2:
+		if h_team["points" == a_team["points"]
+			  game_log("OVERTIME.","t",0)
+			  ot = 1
+	if ot == 1:
+		if h_team["points"] != a_team["points"]:
+			ot = 0
+			
 
 
 
