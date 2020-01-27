@@ -19,9 +19,9 @@ def die_roll(chk,player,team):
 			the_result = the_result*1.25
 		elif player["per"] == "reactive":
 			the_result = the_result*.8	
-		if player["c_pos"] == "skirmisher":
+		if player["c_pos"] == "charge":
 			the_result = the_result*2
-		elif player["c_pos"] == "guard":
+		elif player["c_pos"] == "skirmish":
 			the_result = the_result*.5
 	elif chk == "acc":
 		the_result = player["s_acc"] - the_roll
@@ -33,9 +33,9 @@ def die_roll(chk,player,team):
 			the_result = the_result*1.25
 		elif player["per"] == "aggressive":
 			the_result = the_result*.8	
-		if player["c_pos"] == "battleline":
+		if player["c_pos"] == "snipe":
 			the_result = the_result*2
-		elif player["c_pos"] == "skirmisher":
+		elif player["c_pos"] == "charge":
 			the_result = the_result*.5
 	elif chk == "eva":
 		the_result = player["s_eva"] - the_roll
@@ -47,9 +47,9 @@ def die_roll(chk,player,team):
 			the_result = the_result*1.25
 		elif player["per"] == "stoic":
 			the_result = the_result*.8	
-		if player["c_pos"] == "guard":
+		if player["c_pos"] == "skirmish":
 			the_result = the_result*2
-		elif player["c_pos"] == "battleline":
+		elif player["c_pos"] == "snipe":
 			the_result = the_result*.5
 	elif chk == "pot":
 		the_result = player["s_eva"] - the_roll
@@ -144,10 +144,10 @@ for x in h_load:
 		"s_int":int(xi[2]),"s_acc":int(xi[3]),"s_eva":int(xi[4]),"s_pot":int(xi[5]),"s_fit":int(xi[6]),"s_ego":int(xi[7]),"s_kno":int(xi[8]),
 		"per":xi[9],"drug":xi[10],
 		"r_init":0,"r_shts":0,"r_hit":0,
-		"c_pos":"","w_pos":xi[11],"sw_pos":xi[12],"l_pos":xi[13],"sl_pos":xi[14],
+		"c_pos":"","t11":xi[11],"t12":xi[12],"t13":xi[13],"t21":xi[14],"t22":xi[15],"t23":xi[16],
 		"exp":0,"fat":0,
 		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
-		"c_ht":int(xi[16]),"c_ph":int(xi[17]),"c_fc":int(xi[18]),"c_st":int(xi[19]),"c_rd":int(xi[20])}
+		"c_ht":int(xi[17]),"c_ph":int(xi[18]),"c_fc":int(xi[19]),"c_st":int(xi[20]),"c_rd":int(xi[21])}
 		all_players.append(new_player)
 
 #Load Away Team
@@ -180,84 +180,21 @@ for x in a_load:
 		"s_int":int(xi[2]),"s_acc":int(xi[3]),"s_eva":int(xi[4]),"s_pot":int(xi[5]),"s_fit":int(xi[6]),"s_ego":int(xi[7]),"s_kno":int(xi[8]),
 		"per":xi[9],"drug":xi[10],
 		"r_init":0,"r_shts":0,"r_hit":0,
-		"c_pos":"","w_pos":xi[11],"sw_pos":xi[12],"l_pos":xi[13],"sl_pos":xi[14],
+		"c_pos":"","t11":xi[11],"t12":xi[12],"t13":xi[13],"t21":xi[14],"t22":xi[15],"t23":xi[16],
 		"exp":0,"fat":0,
 		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
-		"c_ht":int(xi[16]),"c_ph":int(xi[17]),"c_fc":int(xi[18]),"c_st":int(xi[19]),"c_rd":int(xi[20])}
+		"c_ht":int(xi[17]),"c_ph":int(xi[18]),"c_fc":int(xi[19]),"c_st":int(xi[20]),"c_rd":int(xi[21])}
 		all_players.append(new_player)
 #Be sure to close files at the end
 
 
 clock = 1
+half = 1
 game_log("Match Begins!","t",0)
 
-while clock < 41:
-	#Figure out the game state and set the actions and reset round info
-	if a_team["points"]+10 < h_team["points"]:
-		for p in all_players:
-			if p["team"]=="home":
-				p["c_pos"] = p["w_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-			elif p["team"]=="away":
-				p["c_pos"] = p["l_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-		#Home team winning by wide margin
-		#Away team winning by wide margin
-	elif a_team["points"] > h_team["points"]+10:
-		for p in all_players:
-			if p["team"]=="home":
-				p["c_pos"] = p["l_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-			elif p["team"]=="away":
-				p["c_pos"] = p["w_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-	elif a_team["points"] < h_team["points"]:
-		#Home team winning by small margin
-		for p in all_players:
-			if p["team"]=="home":
-				p["c_pos"] = p["sw_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-			elif p["team"]=="away":
-				p["c_pos"] = p["sl_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-	elif a_team["points"] > h_team["points"]:
-		#Away team winning by small margin
-		for p in all_players:
-			if p["team"]=="home":
-				p["c_pos"] = p["sl_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-			elif p["team"]=="away":
-				p["c_pos"] = p["sw_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-	else:
-		#If the game is tied, use slightly losing
-		for p in all_players:
-			if p["team"]=="home":
-				p["c_pos"] = p["sl_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000
-			elif p["team"]=="away":
-				p["c_pos"] = p["sl_pos"]
-				p["r_shts"] = 0
-				p["r_hit"] = 0
-				p["r_init"] = -1000	
+while clock <= 16 and half <=2:
+	#Choose tactics by building
+	
 
 	#Roll initative for all players
 	for p in all_players:
