@@ -116,7 +116,7 @@ def game_log(msg,tier,d_flag):
 
 all_players = []
 #Load Home Team
-h_team={"name":"hometeam","points":0,"Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0}
+h_team={"name":"hometeam","points":0,"r_points":0,"r_pref":"","Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0,"tac1_pref":0,"tac2_pref":0,"tac3_pref":0}
 #Load Players
 h_path = input("Home Team File: ")
 h_load = open(h_path,"r+")
@@ -139,19 +139,25 @@ for x in h_load:
 		h_team["Fan_Cap"] = int(xi[2])
 	elif xi[0] == "name":
 		h_team["name"] = xi[1].rstrip()
+	elif xi[0] == "tac1_pref":
+		h_team["tac1_pref"] = int(xi[1])
+	elif xi[0] == "tac1_pref":
+		h_team["tac2_pref"] = int(xi[1])
+	elif xi[0] == "tac1_pref":
+		h_team["tac3_pref"] = int(xi[1])
 	elif xi[0] == "roster-player":
 		new_player={"name":xi[1],"team":"home",
 		"s_int":int(xi[2]),"s_acc":int(xi[3]),"s_eva":int(xi[4]),"s_pot":int(xi[5]),"s_fit":int(xi[6]),"s_ego":int(xi[7]),"s_kno":int(xi[8]),
 		"per":xi[9],"drug":xi[10],
 		"r_init":0,"r_shts":0,"r_hit":0,
-		"c_pos":"","t11":xi[11],"t12":xi[12],"t13":xi[13],"t21":xi[14],"t22":xi[15],"t23":xi[16],
+		"c_pos":"","tac1":xi[11],"tac2":xi[12],"tac3":xi[13],
 		"exp":0,"fat":0,
 		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
 		"c_ht":int(xi[17]),"c_ph":int(xi[18]),"c_fc":int(xi[19]),"c_st":int(xi[20]),"c_rd":int(xi[21])}
 		all_players.append(new_player)
 
 #Load Away Team
-a_team={"name":"awayteam","points":0,"Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0}
+a_team={"name":"awayteam","points":0,"r_points":0,"r_pref":"","Medicial":-1,"Mentor":-1,"Marketeer":-1,"Lights":0,"Fan_Exp":0,"Fan_Cap":0,"Coach_Cost":0,"tac1_pref":0,"tac2_pref":0,"tac3_pref":0}
 #Load Players
 a_path = input("Away Team File: ")
 a_load = open(a_path,"r+")
@@ -175,12 +181,18 @@ for x in a_load:
 		a_team["Fan_Cap"] = int(xi[2])
 	elif xi[0] == "name":
 		a_team["name"] = xi[1].rstrip()
+	elif xi[0] == "tac1_pref":
+		a_team["tac1_pref"] = int(xi[1])
+	elif xi[0] == "tac1_pref":
+		a_team["tac2_pref"] = int(xi[1])
+	elif xi[0] == "tac1_pref":
+		a_team["tac3_pref"] = int(xi[1])
 	elif xi[0] == "roster-player":
 		new_player={"name":xi[1],"team":"away",
 		"s_int":int(xi[2]),"s_acc":int(xi[3]),"s_eva":int(xi[4]),"s_pot":int(xi[5]),"s_fit":int(xi[6]),"s_ego":int(xi[7]),"s_kno":int(xi[8]),
 		"per":xi[9],"drug":xi[10],
 		"r_init":0,"r_shts":0,"r_hit":0,
-		"c_pos":"","t11":xi[11],"t12":xi[12],"t13":xi[13],"t21":xi[14],"t22":xi[15],"t23":xi[16],
+		"c_pos":"","tac1":xi[11],"tac2":xi[12],"tac3":xi[13],
 		"exp":0,"fat":0,
 		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
 		"c_ht":int(xi[17]),"c_ph":int(xi[18]),"c_fc":int(xi[19]),"c_st":int(xi[20]),"c_rd":int(xi[21])}
@@ -195,8 +207,44 @@ ot = 0
 game_log("Match Begins!","t",0)
 
 while (clock <= 16 and half <=2) or ot == 1:
-	#Choose tactics by building
-	
+	#Choose tactics by building rolls
+	a_tac_range = a_team["tac1_pref"]+a_team["tac2_pref"]+a_team["tac3_pref"]
+	h_tac_range = h_team["tac1_pref"]+h_team["tac2_pref"]+h_team["tac3_pref"]
+
+	# Based on roll range, set tactic
+	a_tac_roll = random.randint(0,a_tac_range)
+	if a_tac_roll < a_team["tac1_pref"]:
+		for p in all_players:
+			if p["team"] == "away":
+				p["c_pos"] = p["tac1"]
+				a_team["r_pref"] = "tac1"
+	elif a_tac_roll < a_team["tac1_pref"]+a_team["tac2_pref"] and a_tac_roll > a_team["tac1_pref"]:
+		for p in all_players:
+			if p["team"] == "away":
+				p["c_pos"] = p["tac2"]
+				a_team["r_pref"] = "tac2"
+	else:
+		for p in all_players:
+			if p["team"] == "away":
+				p["c_pos"] = p["tac3"]
+				a_team["r_pref"] = "tac3"
+
+	h_tac_roll = random.randint(0,h_tac_range)
+	if h_tac_roll < h_team["tac1_pref"]:
+		for p in all_players:
+			if p["team"] == "home":
+				p["c_pos"] = p["tac1"]
+				h_team["r_pref"] = "tac1"
+	elif h_tac_roll < h_team["tac1_pref"]+h_team["tac2_pref"] and h_tac_roll > h_team["tac1_pref"]:
+		for p in all_players:
+			if p["team"] == "home":
+				p["c_pos"] = p["tac2"]
+				h_team["r_pref"] = "tac2"
+	else:
+		for p in all_players:
+			if p["team"] == "home":
+				p["c_pos"] = p["tac3"]
+				h_team["r_pref"] = "tac3"
 
 	#Roll initative for all players
 	for p in all_players:
@@ -245,7 +293,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 							dodge = die_roll("eva",all_players[active],a_team)
 							if ambush > dodge:
 								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t",0)
-								h_team["points"] = h_team["points"] + 1
+								h_team["r_points"] = h_team["r_points"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								all_players[active]["g_ht"] = all_players[active]["g_ht"] + 1
 								stealing = 0
@@ -255,7 +303,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 							dodge = die_roll("eva",all_players[active],h_team)
 							if ambush > dodge:
 								game_log(ambu["name"]+" defends their flag from "+all_players[active]["name"]+"!","t",0)
-								a_team["points"] = a_team["points"] + 1
+								a_team["r_points"] = a_team["r_points"] + 1
 								all_players[active]["g_ht"] = all_players[active]["g_ht"] + 1
 								ambu["g_ph"] = ambu["g_ph"] + 1
 								stealing = 0
@@ -264,10 +312,10 @@ while (clock <= 16 and half <=2) or ot == 1:
 				if stealing == 1:
 					game_log(all_players[active]["name"]+" has stolen the enemy flag and ended the round!","t",0)
 					if all_players[active]["team"] == "home":
-						h_team["points"] = h_team["points"] + 4
+						h_team["r_points"] = h_team["r_points"] + 4
 						all_players[active]["g_fc"] = all_players[active]["g_fc"] + 1
 					elif all_players[active]["team"] == "away":
-						a_team["points"] = a_team["points"] + 4
+						a_team["r_points"] = a_team["r_points"] + 4
 						all_players[active]["g_fc"] = all_players[active]["g_fc"] + 1
 					break
 			else:
@@ -284,7 +332,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 							dodge = die_roll("eva",all_players[target],a_team)
 							if attack > dodge:
 								game_log(all_players[active]["name"]+" hits "+all_players[target]["name"]+"!","t",0)
-								h_team["points"] = h_team["points"] + 1
+								h_team["r_points"] = h_team["r_points"] + 1
 								all_players[active]["g_ph"] = all_players[active]["g_ph"] + 1
 								all_players[target]["r_hit"] = 1
 								all_players[target]["g_ht"] = all_players[target]["g_ht"] + 1
@@ -297,7 +345,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 							dodge = die_roll("eva",all_players[target],h_team)
 							if attack > dodge:
 								game_log(all_players[active]["name"]+" hits "+all_players[target]["name"]+"!","t",0)
-								a_team["points"] = a_team["points"] + 1
+								a_team["r_points"] = a_team["r_points"] + 1
 								all_players[active]["g_ph"] = all_players[active]["g_ph"] + 1
 								all_players[target]["r_hit"] = 1
 								all_players[target]["g_ht"] = all_players[target]["g_ht"] + 1
@@ -312,10 +360,10 @@ while (clock <= 16 and half <=2) or ot == 1:
 					game_log(all_players[active]["name"]+" has stolen the unprotected enemy flag and ended the round!","t",0)
 					if all_players[active]["team"] == "home":
 						game_log("The away team had no players to protect the flag","t",0)
-						h_team["points"] = h_team["points"] + 4
+						h_team["r_points"] = h_team["r_points"] + 4
 					elif all_players[active]["team"] == "away":
 						game_log("The home team had no players to protect the flag","t",0)
-						a_team["points"] = a_team["points"] + 4
+						a_team["r_points"] = a_team["r_points"] + 4
 					break
 
 		#Count remaining shots
@@ -335,7 +383,46 @@ while (clock <= 16 and half <=2) or ot == 1:
 		else:
 			active = active + 1
 
-		#If not 
+		#If not
+
+	# Advance add in points, change preferences:
+	# +1 if you won the round with this tactic
+	# -1 down to 1 if you lost the round with this tactic
+	# No change for ties
+
+	if home["r_points"] > away["r_points"]:
+		if home["r_pref"] == "tac1":
+			if home["tac1_pref"] = home["tac1_pref"] + 1
+		elif home["r_pref"] == "tac2":
+			if home["tac2_pref"] = home["tac2_pref"] + 1
+		elif home["r_pref"] == "tac3":
+			if home["tac3_pref"] = home["tac3_pref"] + 1
+		if away["r_pref"] == "tac1" and away["tac1_pref"] > 1:
+			if away["tac1_pref"] = away["tac1_pref"] - 1
+		elif away["r_pref"] == "tac2" and away["tac2_pref"] > 1:
+			if away["tac2_pref"] = away["tac2_pref"] - 1
+		elif away["r_pref"] == "tac3" and away["tac3_pref"] > 1:
+			if away["tac3_pref"] = away["tac3_pref"] - 1
+	elif home["r_points"] < away["r_points"]:
+		if away["r_pref"] == "tac1":
+			if away["tac1_pref"] = away["tac1_pref"] + 1
+		elif away["r_pref"] == "tac2":
+			if away["tac2_pref"] = away["tac2_pref"] + 1
+		elif away["r_pref"] == "tac3":
+			if away["tac3_pref"] = away["tac3_pref"] + 1
+		if home["r_pref"] == "tac1" and home["tac1_pref"] > 1:
+			if home["tac1_pref"] = home["tac1_pref"] - 1
+		elif home["r_pref"] == "tac2" and home["tac2_pref"] > 1:
+			if home["tac2_pref"] = home["tac2_pref"] - 1
+		elif home["r_pref"] == "tac3" and home["tac3_pref"] > 1:
+			if home["tac3_pref"] = home["tac3_pref"] - 1
+
+	# Add the round score into the total, reset
+	home["points"] = home["points"] + home["r_points"] 
+	home["r_points"] = 0
+	away["points"] = away["points"] + away["r_points"] 
+	away["r_points"] = 0
+
 	#Clock Advance
 	game_log("==============================","f",0)
 	game_log("end of round "+str(clock),"t",0)
@@ -347,6 +434,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 	if clock == 17 and half == 1:
 		game_log("HALF TIME!","t",0)
 		half = 2
+		# Halftime adjustments - +4 to the highest total, -2 down to 1 for the lowest, don't touch ties
 	
 	#Code for overtime halfs would be good to.
 	if clock == 17 and half == 2 and ot == 2:

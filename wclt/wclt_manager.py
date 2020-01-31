@@ -12,7 +12,6 @@ print("S-Upgrade Stadium")
 print("V-View Team")
 p_choice = input("Action? ")
 
-#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
 
 
 if p_choice == "G"
