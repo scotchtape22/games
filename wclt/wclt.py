@@ -141,9 +141,9 @@ for x in h_load:
 		h_team["name"] = xi[1].rstrip()
 	elif xi[0] == "tac1_pref":
 		h_team["tac1_pref"] = int(xi[1])
-	elif xi[0] == "tac1_pref":
+	elif xi[0] == "tac2_pref":
 		h_team["tac2_pref"] = int(xi[1])
-	elif xi[0] == "tac1_pref":
+	elif xi[0] == "tac3_pref":
 		h_team["tac3_pref"] = int(xi[1])
 	elif xi[0] == "roster-player":
 		new_player={"name":xi[1],"team":"home",
@@ -183,9 +183,9 @@ for x in a_load:
 		a_team["name"] = xi[1].rstrip()
 	elif xi[0] == "tac1_pref":
 		a_team["tac1_pref"] = int(xi[1])
-	elif xi[0] == "tac1_pref":
+	elif xi[0] == "tac2_pref":
 		a_team["tac2_pref"] = int(xi[1])
-	elif xi[0] == "tac1_pref":
+	elif xi[0] == "tac3_pref":
 		a_team["tac3_pref"] = int(xi[1])
 	elif xi[0] == "roster-player":
 		new_player={"name":xi[1],"team":"away",
@@ -260,7 +260,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 			#Count shots
 			if p["c_pos"] != "ambush":
 				p["r_shts"] = p["r_shts"] + 1
-				if p["c_pos"] == "fteam":
+				if p["c_pos"] == "freefire":
 					p["r_shts"] = p["r_shts"] + 1
 				if p["per"] == "ambitious":
 					p["r_shts"] = p["r_shts"] + 1				
@@ -392,30 +392,30 @@ while (clock <= 16 and half <=2) or ot == 1:
 
 	if home["r_points"] > away["r_points"]:
 		if home["r_pref"] == "tac1":
-			if home["tac1_pref"] = home["tac1_pref"] + 1
+			home["tac1_pref"] = home["tac1_pref"] + 1
 		elif home["r_pref"] == "tac2":
-			if home["tac2_pref"] = home["tac2_pref"] + 1
+			home["tac2_pref"] = home["tac2_pref"] + 1
 		elif home["r_pref"] == "tac3":
-			if home["tac3_pref"] = home["tac3_pref"] + 1
+			home["tac3_pref"] = home["tac3_pref"] + 1
 		if away["r_pref"] == "tac1" and away["tac1_pref"] > 1:
-			if away["tac1_pref"] = away["tac1_pref"] - 1
+			away["tac1_pref"] = away["tac1_pref"] - 1
 		elif away["r_pref"] == "tac2" and away["tac2_pref"] > 1:
-			if away["tac2_pref"] = away["tac2_pref"] - 1
+			away["tac2_pref"] = away["tac2_pref"] - 1
 		elif away["r_pref"] == "tac3" and away["tac3_pref"] > 1:
-			if away["tac3_pref"] = away["tac3_pref"] - 1
+			away["tac3_pref"] = away["tac3_pref"] - 1
 	elif home["r_points"] < away["r_points"]:
 		if away["r_pref"] == "tac1":
-			if away["tac1_pref"] = away["tac1_pref"] + 1
+			away["tac1_pref"] = away["tac1_pref"] + 1
 		elif away["r_pref"] == "tac2":
-			if away["tac2_pref"] = away["tac2_pref"] + 1
+			away["tac2_pref"] = away["tac2_pref"] + 1
 		elif away["r_pref"] == "tac3":
-			if away["tac3_pref"] = away["tac3_pref"] + 1
+			away["tac3_pref"] = away["tac3_pref"] + 1
 		if home["r_pref"] == "tac1" and home["tac1_pref"] > 1:
-			if home["tac1_pref"] = home["tac1_pref"] - 1
+			home["tac1_pref"] = home["tac1_pref"] - 1
 		elif home["r_pref"] == "tac2" and home["tac2_pref"] > 1:
-			if home["tac2_pref"] = home["tac2_pref"] - 1
+			home["tac2_pref"] = home["tac2_pref"] - 1
 		elif home["r_pref"] == "tac3" and home["tac3_pref"] > 1:
-			if home["tac3_pref"] = home["tac3_pref"] - 1
+			home["tac3_pref"] = home["tac3_pref"] - 1
 
 	# Add the round score into the total, reset
 	home["points"] = home["points"] + home["r_points"] 
@@ -438,9 +438,9 @@ while (clock <= 16 and half <=2) or ot == 1:
 	
 	#Code for overtime halfs would be good to.
 	if clock == 17 and half == 2 and ot == 2:
-		if h_team["points" == a_team["points"]
-			  game_log("OVERTIME.","t",0)
-			  ot = 1
+		if h_team["points"] == a_team["points"]:
+			game_log("OVERTIME.","t",0)
+			ot = 1
 	if ot == 1:
 		if h_team["points"] != a_team["points"]:
 			ot = 0
