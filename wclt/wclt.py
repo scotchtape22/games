@@ -226,36 +226,19 @@ while (clock <= 16 and half <=2) or ot == 1:
 			if p["team"] == "away":
 				p["c_pos"] = p["tac1"]
 		a_team["r_pref"] = "tac1"
-		game_log("Away team chose tactic 1","t",0)
+		# game_log("Away team chose tactic 1","t",0)
 	elif a_tac_roll < a_team["tac1_pref"]+a_team["tac2_pref"] and a_tac_roll > a_team["tac1_pref"]:
 		for p in all_players:
 			if p["team"] == "away":
 				p["c_pos"] = p["tac2"]
 		a_team["r_pref"] = "tac2"
-		game_log("Away team chose tactic 2","t",0)
+		# game_log("Away team chose tactic 2","t",0)
 	else:
 		for p in all_players:
 			if p["team"] == "away":
 				p["c_pos"] = p["tac3"]
 		a_team["r_pref"] = "tac3"
-		game_log("Away team chose tactic 3","t",0)
-
-	#Count players for away team - this is debugging!
-	b = 0
-	a = 0
-	s = 0
-	f = 0
-	for p in all_players:
-		if p["team"] == "away":
-			if p["c_pos"] == "bench":
-				b = b + 1
-			elif p["c_pos"] == "ambush":
-				a = a + 1
-			elif p["c_pos"] == "steal":
-				s = s + 1
-			else:
-				f = f + 1
-	print("Away team will have "+str(b)+" on the bench "+str(a)+" on ambush "+str(s)+" on steal "+str(f)+" elsewhere")
+		# game_log("Away team chose tactic 3","t",0)
 
 	h_tac_roll = random.randint(0,h_tac_range)
 	if h_tac_roll < h_team["tac1_pref"]:
@@ -263,19 +246,19 @@ while (clock <= 16 and half <=2) or ot == 1:
 			if p["team"] == "home":
 				p["c_pos"] = p["tac1"]
 		h_team["r_pref"] = "tac1"
-		game_log("Home team chose tactic 1","t",0)
+		# game_log("Home team chose tactic 1","t",0)
 	elif h_tac_roll < h_team["tac1_pref"]+h_team["tac2_pref"] and h_tac_roll > h_team["tac1_pref"]:
 		for p in all_players:
 			if p["team"] == "home":
 				p["c_pos"] = p["tac2"]
 		h_team["r_pref"] = "tac2"
-		game_log("Home team chose tactic 2","t",0)
+		# game_log("Home team chose tactic 2","t",0)
 	else:
 		for p in all_players:
 			if p["team"] == "home":
 				p["c_pos"] = p["tac3"]
 		h_team["r_pref"] = "tac3"
-		game_log("Home team chose tactic 3","t",0)
+		# game_log("Home team chose tactic 3","t",0)
 
 	#Roll initative for all players
 	for p in all_players:
@@ -307,9 +290,9 @@ while (clock <= 16 and half <=2) or ot == 1:
 	active = 0
 	#print(shots_remaining)
 	while shots_remaining > 0:
-		#print(all_players[active]['name']+" is up to "+all_players[active]['c_pos']+" , shots remaining "+str(all_players[active]['r_shts'])+" , times hit "+str(all_players[active]['r_hit']))
+		# print(all_players[active]['name']+" is up to "+all_players[active]['c_pos']+" , shots remaining "+str(all_players[active]['r_shts'])+" , times hit "+str(all_players[active]['r_hit']))
 		if all_players[active]["r_shts"] > 0:
-			#print("player is acting")
+			# print("player is acting")
 			all_players[active]["r_shts"] = all_players[active]["r_shts"] - 1
 			stealing = 1
 			#Check action
@@ -350,7 +333,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 					break
 			else:
 				#Else, find targets
-				#print("Looking for target")
+				# print("Looking for target")
 				target = len(all_players) - 1
 				while target > 0:
 					if all_players[target]["team"] != all_players[active]["team"] and all_players[target]["c_pos"] != "bench" and all_players[target]["r_hit"] == 0:
@@ -452,6 +435,12 @@ while (clock <= 16 and half <=2) or ot == 1:
 	h_team["r_points"] = 0
 	a_team["points"] = a_team["points"] + a_team["r_points"] 
 	a_team["r_points"] = 0
+
+	# Reset player shot counts and hit counts
+	for p in all_players:
+		p["r_shts"] = 0
+		p["r_hit"] = 0
+		p["r_init"] = -1000
 
 	#Clock Advance
 	game_log("==============================","f",0)
