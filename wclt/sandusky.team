@@ -1,0 +1,29 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Sandusky Coasters
+tresaure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+# Tactic preferences
+tac1_pref:1
+tac2_pref:1
+tac3_pref:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Butch Kim:40:63:69:77:41:15:29:reactive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Nottingham:17:0:0:NA
+roster-player:Cheech Survivor:69:44:59:57:64:19:29:stoic:NA:ambush:ambush:ambush:0:0:0:0:0:0:Brussels:18:0:0:NA
+roster-player:Wendy Dooblekill:45:44:50:51:66:20:16:ambitious:NA:charge:steal:freefire:0:0:0:0:0:0:Hamburg:17:0:0:NA
+roster-player:Isaac McMan:63:47:52:55:46:19:25:ambitious:NA:charge:snipe:freefire:0:0:0:0:0:0:Toledo:17:0:0:NA
+roster-player:Jeremy Cloquet:60:45:70:40:61:2:12:stoic:NA:steal:snipe:freefire:0:0:0:0:0:0:Champagn:19:0:0:NA
+roster-player:Jeremy York:60:48:69:62:70:7:30:eager:NA:steal:snipe:freefire:0:0:0:0:0:0:St.Paul:18:0:0:NA
+roster-player:Bolt Slapshot:56:70:65:69:54:10:17:reactive:NA:skirmish:skirmish:freefire:0:0:0:0:0:0:Champagn:20:0:0:NA
+roster-player:Annabelle Charelston:42:47:60:48:57:1:26:eager:NA:skirmish:skirmish:freefire:0:0:0:0:0:0:South Beach:17:0:0:NA
+roster-player:Blast Phobos:58:49:51:49:65:3:23:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Cleveland:18:0:0:NA
+roster-player:Vlad Hall:69:53:66:61:66:18:11:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Nottingham:19:0:0:NA
+roster-player:Robin Evergreen:59:68:67:30:59:13:21:eager:NA:bench:bench:bench:0:0:0:0:0:0:Minneapolis:16:0:0:NA
+roster-player:Dic Evergreen:60:54:70:78:49:10:29:eager:NA:bench:bench:bench:0:0:0:0:0:0:Mexico City:19:0:0:NA
+#PROSPECTS

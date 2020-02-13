@@ -4,12 +4,25 @@ import random
 #WCLT Player creation
 #Make leagues for Germany, Russia, and Japan?
 
-locations = ["Milwaukee","Chicago","Champagn","St.Paul","Duluth","Miami","Detroit","Seattle","Brooklyn","Montreal","Vancouver","Havanna","Atlanta","Toronto","Mexico City","Vera Cruz","Austin","South Beach","Cleveland","Toledo","Hollywood","Minneapolis","Qubec City","Portland","Roswell","Boston","New Orleans","Silicon Valley","Chicago","Denver"]
+loc_data = open("data_lists/locations.txt","r")
+locations = loc_data.readlines()
+loc_data.close()
+for l in locations:
+	l = l.rstrip()
+
 dispos = ["aggressive","reactive","stoic","ambitious","eager"]
-f_name = ["Skip","Captain","Knack","Zyler","Garth","Cheech","Chong","Xyler","Robin","Flash","Beef","Blast","Butch","Dic","Austin","Gordon","Archie","William","Sid","Justin","Wanye","Bobby","Guy","Lucky","Luc","Manly","Doug","Sergei","Vlad","Dimitri","CJ","Red","Dustin","Yooper","Igor","Christoff","Paul","Mordecai","Tommy","Isaac","Eli","Mario","Jonny","Gary","Lightening","no-name","Jeremy","Sarge","Phinneas","Billy","Ezikial","Remy","Sarah","Benny","Robert","Bolt","Butch","Peter","Blast","Paul","Annabelle","Dirk","Marie","Slab","Flint","Soph","Bert","Lazer","Blendin","Mable","Dipper","Wendy","Trigger","Squid","Missy","Ted","Rufus","Sanic"]
-l_name = ["85","Sexbang","Sung","Danger","Macklin","Thunderfist","Starscream","MeOuch","Soos","Cordaroy","Pines","Phobos","Booteh","Beefcake","Starlite","Calumet","Mariucci","Abney","MacInnis","Hancock","Sandusky","Ontanogan","L\'Anse","Chassel","Portage","Superior","Erie","Huron","Alsance","McAllister","Sherpa","Soo","Sweney","Manistique","Gould","Allegheny","Hamilton","Mississauga","Kingston","Sudbury","Monongahela","Charelston","Parker","Walters","Bennett","St.Croix","Wausau","Hodag","Kewaskum","Menomonee","Brunswick","Essen","Calhammer","Carmel","Llopis","Dortmund","Mercer","Lutsen","Finlandia","Cloquet","Nitro","Ashland","Fargo","Butte","Vamboldt","Newport","Bozeman","Whitehall","Linden","Baraga","Turku","Dresden","Niagara","Zodd","Domski","Parros","Inronstag","McHugeLarge","Metropolous","Deadlift","Vanderhuge","York","Young","Hardcheese","Kim","Orr","Myre","Bombey","Horton","Roy","Marshfield","Lom","Rhinelander","McMan","Cooles","Krieger","Carlton","Primm","Maple","Evergreen","River","Duluth","St.Paul","Muskeegon","Houghton","Arbor","LaThrill","Hawk","Great","Thatcher","Thrash","Hall","Shock","Hoth","House","Plante","Jones","Two-Point-0","Penn","Temple","Briggs","Norsemen","Flake","Burre","Su","Greenberg","LaFlamme","Black","Federov","Blitz","MacIntyre","Parks","Dawson","Johnson","Sully","Ortega","Fedorchek","Cox","Steele","Mccrosscheq","Mac","James","Slapshot","Henrei","McMan","Moser","Survivor","Sisu","Dogmeat","McTravis","Dooblekill","Deadeye","Beefboi","Mann","Wyld","Stallions"]
 
+fn_data = open("data_lists/firstnames.txt","r")
+f_name = fn_data.readlines()
+fn_data.close()
+for l in f_name:
+	l = l.rstrip()
 
+ln_data = open("data_lists/lastnames.txt","r")
+l_name = ln_data.readlines()
+ln_data.close()
+for l in l_name:
+	l = l.rstrip()
 
 
 create = input("How many players? ")
@@ -23,12 +36,12 @@ while create > 0:
 	my_fit = random.randint(40,70)
 	my_ego = random.randint(0,20)
 	my_kno = random.randint(10,30)
-	my_name = random.choice(f_name)+" "+random.choice(l_name)
+	my_name = random.choice(f_name).rstrip()+" "+random.choice(l_name).rstrip()
 	my_home = random.choice(locations)
 	my_age = random.randint(16,20)
 
 	#Change the output to match the format in the team template, which should eventually match the sql output
-	print(my_name+":"+str(my_int) +":"+str(my_acc) +":"+str(my_eva)+":"+str(my_pot)+":"+str(my_fit)+":"+str(my_kno)+":"+str(my_kno)+":"+my_dispo+":NA:bench:bench:bench:bench:0:0:0:0:0:0:"+my_home+":"+my_age":0:0:"+"NA")
+	print(my_name+":"+str(my_int) +":"+str(my_acc) +":"+str(my_eva)+":"+str(my_pot)+":"+str(my_fit)+":"+str(my_ego)+":"+str(my_kno)+":"+my_dispo+":NA:bench:bench:bench:0:0:0:0:0:0:"+my_home.rstrip()+":"+str(my_age)+":0:0:"+"NA")
 
 	create = create - 1
-#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:Age:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:TAC1:TAC2:TAC3:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:Age:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE

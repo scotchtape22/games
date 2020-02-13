@@ -2,24 +2,29 @@
 # To Comment
 # Will be replaced by a database
 # Delimiter is ':'
-name:Chicago Gunners
-tresaure:8treasure:0
+name:Chicago Blues
+tresaure:0
 #COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
 medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
 stadium:0:1
-#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:WIN:S_WIN:LOSE:S_LOSE:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Dirk Ashland:63:49:65:31:59:25:24:stoic:NA:guard:guard:guard:guard:0:14:50:0:46:200:Silicon Valley:0:0:NA
-roster-player:Isaac Temple:68:56:50:54:45:24:24:reactive:NA:guard:guard:guard:guard:0:12:41:0:31:200:St.Paul:0:0:NA
-roster-player:Dirk Parks:67:62:55:54:64:30:30:reactive:NA:guard:guard:guard:guard:0:12:48:0:31:200:Miami:0:0:NA
-roster-player:Cheech Mccrosscheq:77:72:55:37:69:27:25:aggressive:NA:fteam:fteam:fteam:fteam:0:15:99:0:24:200:Minneapolis:0:0:NA
-roster-player:Jeremy Mariucci:41:58:48:55:47:11:11:eager:NA:fteam:fteam:fteam:fteam:0:46:49:0:78:200:Miami:0:0:NA
-roster-player:Lucky Ashland:52:41:43:71:47:22:22:reactive:NA:ambush:ambush:ambush:ambush:0:28:105:0:282:200:New Orleans:0:0:NA
-roster-player:Soph McTravis:57:46:45:42:45:15:15:eager:NA:bench:bench:bench:bench:0:0:0:0:0:0:St.Paul:0:0:NA
-roster-player:Dipper Ontanogan:48:47:66:34:57:23:23:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Toledo:0:0:NA
-roster-player:Flash Cooles:70:44:44:55:43:14:14:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Miami:0:0:NA
-roster-player:Dimitri Abney:65:42:47:71:42:10:11:stoic:NA:ambush:ambush:bench:bench:0:3:30:0:73:42:Milwaukee:0:0:NA
-roster-player:Robert Sudbury:59:65:40:49:68:32:33:eager:NA:bench:bench:steal:steal:0:87:0:23:55:158:New Orleans:0:0:NA
-roster-player:Guy Duluth:56:69:50:32:49:28:28:aggressive:NA:bench:bench:bench:bench:0:0:0:0:0:0:Duluth:0:0:NA
+# Tactic preferences
+tac1_pref:5
+tac2_pref:5
+tac3_pref:5
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Vlad Gould:54:47:53:37:42:10:10:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Vancouver:19:0:0:NA
+roster-player:Lazer Manistique:56:46:62:39:68:25:25:aggressive:NA:charge:skirmish:freefire:0:0:0:0:0:0:Qubec City:17:0:0:NA
+roster-player:Ezikial Whitehall:54:54:63:44:56:12:12:ambitious:NA:charge:skirmish:freefire:0:0:0:0:0:0:Reims:18:0:0:NA
+roster-player:Sanic Steele:57:65:48:53:46:13:13:ambitious:NA:charge:skirmish:freefire:0:0:0:0:0:0:Atlanta:18:0:0:NA
+roster-player:Gary River:68:64:66:80:62:26:26:ambitious:NA:charge:skirmish:freefire:0:0:0:0:0:0:New Orleans:18:0:0:NA
+roster-player:Archie Sudbury:48:59:40:49:65:27:27:eager:NA:steal:steal:steal:0:0:0:0:0:0:Austin:16:0:0:NA
+roster-player:no-name MacIntyre:55:45:57:50:57:16:16:aggressive:NA:steal:steal:steal:0:0:0:0:0:0:Madrid:18:0:0:NA
+roster-player:Cheech Finlandia:51:40:47:73:68:22:22:reactive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Amsterdam:20:0:0:NA
+roster-player:Bolt Beefcake:43:59:49:55:61:26:26:reactive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Liverpool:20:0:0:NA
+roster-player:Paul Erie:56:55:54:50:47:26:26:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Fukuoka:20:0:0:NA
+roster-player:Mordecai Duluth:51:40:46:76:55:10:10:eager:NA:bench:bench:bench:0:0:0:0:0:0:Roswell:17:0:0:NA
+roster-player:Ted Thatcher:67:64:56:75:67:22:22:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Barcelona:16:0:0:NA
+
 #PROSPECTS

@@ -1,0 +1,29 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Grand Rapids Rush
+tresaure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+# Tactic preferences
+tac1_pref:10
+tac2_pref:1
+tac3_pref:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Dimitri Sexbang:60:61:54:70:59:12:16:eager:NA:ambush:ambush:steal:0:0:0:0:0:0:Sapporo:19:0:0:NA
+roster-player:Archie Hancock:47:40:56:54:66:6:17:ambitious:NA:ambush:ambush:steal:0:0:0:0:0:0:Yokohama:17:0:0:NA
+roster-player:Peter Linden:49:50:41:77:42:11:22:reactive:NA:ambush:snipe:steal:0:0:0:0:0:0:Atlanta:17:0:0:NA
+roster-player:Vlad Mercer:64:66:61:44:51:3:20:ambitious:NA:ambush:snipe:steal:0:0:0:0:0:0:Roswell:18:0:0:NA
+roster-player:Yooper Mississauga:57:59:68:69:58:14:12:reactive:NA:steal:snipe:steal:0:0:0:0:0:0:Cleveland:18:0:0:NA
+roster-player:Xyler Beefboi:40:45:47:72:48:12:23:stoic:NA:steal:snipe:steal:0:0:0:0:0:0:Duluth:20:0:0:NA
+roster-player:Ezikial Bennett:45:54:48:40:62:14:24:aggressive:NA:steal:snipe:steal:0:0:0:0:0:0:Miami:20:0:0:NA
+roster-player:Guy Mann:55:48:59:78:64:20:28:aggressive:NA:steal:snipe:steal:0:0:0:0:0:0:Hamburg:18:0:0:NA
+roster-player:Sid Dogmeat:69:70:45:46:44:14:25:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Minneapolis:16:0:0:NA
+roster-player:Captain Sisu:67:59:68:32:69:16:27:eager:NA:bench:bench:bench:0:0:0:0:0:0:Madrid:16:0:0:NA
+roster-player:Missy MacInnis:44:60:43:33:69:0:17:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Madrid:20:0:0:NA
+roster-player:Robert Marshfield:69:67:62:30:44:19:22:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Hollywood:18:0:0:NA
+#PROSPECTS
