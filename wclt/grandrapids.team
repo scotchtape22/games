@@ -14,14 +14,14 @@ tac1_pref:10
 tac2_pref:1
 tac3_pref:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Dimitri Sexbang:62:62:55:70:59:12:19:eager:NA:ambush:ambush:steal:0:45:7:29:1:64:Sapporo:19:0:0:NA
-roster-player:Archie Hancock:47:40:56:54:66:7:17:ambitious:NA:ambush:ambush:steal:0:20:7:5:0:64:Yokohama:17:0:0:NA
-roster-player:Peter Linden:49:50:41:77:42:11:22:reactive:NA:ambush:snipe:steal:0:27:7:11:0:64:Atlanta:17:0:0:NA
-roster-player:Vlad Mercer:66:66:61:44:54:4:20:ambitious:NA:ambush:snipe:steal:0:41:3:25:1:64:Roswell:18:0:0:NA
-roster-player:Yooper Mississauga:60:59:71:69:59:17:13:reactive:NA:steal:snipe:steal:0:0:26:0:17:64:Cleveland:18:0:0:NA
-roster-player:Xyler Beefboi:40:45:47:72:48:12:23:stoic:NA:steal:snipe:steal:0:0:28:0:3:64:Duluth:20:0:0:NA
-roster-player:Ezikial Bennett:45:54:48:40:62:15:24:aggressive:NA:steal:snipe:steal:0:0:31:0:4:64:Miami:20:0:0:NA
-roster-player:Guy Mann:55:48:59:78:64:20:28:aggressive:NA:steal:snipe:steal:0:0:32:0:7:64:Hamburg:18:0:0:NA
+roster-player:Dimitri Sexbang:64:63:55:70:60:12:20:eager:NA:ambush:ambush:steal:0:63:21:38:5:128:Sapporo:19:0:0:NA
+roster-player:Archie Hancock:47:40:56:54:66:7:17:ambitious:NA:ambush:ambush:steal:0:35:24:12:2:128:Yokohama:17:0:0:NA
+roster-player:Peter Linden:50:50:41:77:42:11:22:reactive:NA:ambush:snipe:steal:0:45:22:23:2:128:Atlanta:17:0:0:NA
+roster-player:Vlad Mercer:69:66:62:44:55:7:22:ambitious:NA:ambush:snipe:steal:0:65:16:44:4:128:Roswell:18:0:0:NA
+roster-player:Yooper Mississauga:60:59:71:69:59:17:13:reactive:NA:steal:snipe:steal:0:0:54:0:25:128:Cleveland:18:0:0:NA
+roster-player:Xyler Beefboi:40:45:47:72:48:12:23:stoic:NA:steal:snipe:steal:0:0:61:0:7:128:Duluth:20:0:0:NA
+roster-player:Ezikial Bennett:45:54:49:40:62:15:25:aggressive:NA:steal:snipe:steal:0:0:63:0:6:128:Miami:20:0:0:NA
+roster-player:Guy Mann:55:48:59:78:64:20:28:aggressive:NA:steal:snipe:steal:0:0:69:0:15:128:Hamburg:18:0:0:NA
 roster-player:Sid Dogmeat:69:70:45:46:44:14:25:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Minneapolis:16:0:0:NA
 roster-player:Captain Sisu:67:59:68:32:69:16:27:eager:NA:bench:bench:bench:0:0:0:0:0:0:Madrid:16:0:0:NA
 roster-player:Missy MacInnis:44:60:43:33:69:0:17:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Madrid:20:0:0:NA

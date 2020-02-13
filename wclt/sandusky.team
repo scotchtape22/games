@@ -14,14 +14,14 @@ tac1_pref:1
 tac2_pref:1
 tac3_pref:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Butch Kim:40:63:71:77:41:18:30:reactive:NA:ambush:ambush:ambush:0:24:6:12:0:32:Nottingham:17:0:0:NA
-roster-player:Cheech Survivor:69:48:59:57:65:19:30:stoic:NA:ambush:ambush:ambush:0:32:4:14:0:32:Brussels:18:0:0:NA
-roster-player:Wendy Dooblekill:46:44:50:51:66:22:16:ambitious:NA:charge:steal:freefire:0:20:14:8:0:32:Hamburg:17:0:0:NA
-roster-player:Isaac McMan:64:49:53:55:48:22:25:ambitious:NA:charge:snipe:freefire:0:36:7:19:0:32:Toledo:17:0:0:NA
-roster-player:Jeremy Cloquet:60:48:73:40:63:3:16:stoic:NA:steal:snipe:freefire:0:17:12:7:6:32:Champagn:19:0:0:NA
-roster-player:Jeremy York:63:49:72:62:70:8:30:eager:NA:steal:snipe:freefire:0:15:13:7:3:32:St.Paul:18:0:0:NA
-roster-player:Bolt Slapshot:56:71:69:69:54:10:17:reactive:NA:skirmish:skirmish:freefire:0:28:5:19:0:32:Champagn:20:0:0:NA
-roster-player:Annabelle Charelston:42:47:61:48:57:1:26:eager:NA:skirmish:skirmish:freefire:0:24:8:7:0:32:South Beach:17:0:0:NA
+roster-player:Butch Kim:43:66:78:77:43:19:34:reactive:NA:ambush:ambush:ambush:0:54:27:27:0:96:Nottingham:17:0:0:NA
+roster-player:Cheech Survivor:70:50:60:57:66:22:32:stoic:NA:ambush:ambush:ambush:0:68:14:32:0:96:Brussels:18:0:0:NA
+roster-player:Wendy Dooblekill:46:45:52:51:68:22:16:ambitious:NA:charge:steal:freefire:0:75:37:33:0:96:Hamburg:17:0:0:NA
+roster-player:Isaac McMan:65:50:56:55:50:27:25:ambitious:NA:charge:snipe:freefire:0:117:21:58:0:96:Toledo:17:0:0:NA
+roster-player:Jeremy Cloquet:62:52:75:40:65:5:19:stoic:NA:steal:snipe:freefire:0:54:36:27:13:96:Champagn:19:0:0:NA
+roster-player:Jeremy York:63:52:75:62:72:9:34:eager:NA:steal:snipe:freefire:0:71:32:35:13:96:St.Paul:18:0:0:NA
+roster-player:Bolt Slapshot:59:73:71:69:59:13:21:reactive:NA:skirmish:skirmish:freefire:0:86:21:54:0:96:Champagn:20:0:0:NA
+roster-player:Annabelle Charelston:44:49:61:48:59:2:27:eager:NA:skirmish:skirmish:freefire:0:69:32:30:0:96:South Beach:17:0:0:NA
 roster-player:Blast Phobos:58:49:51:49:65:3:23:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Cleveland:18:0:0:NA
 roster-player:Vlad Hall:69:53:66:61:66:18:11:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Nottingham:19:0:0:NA
 roster-player:Robin Evergreen:59:68:67:30:59:13:21:eager:NA:bench:bench:bench:0:0:0:0:0:0:Minneapolis:16:0:0:NA
