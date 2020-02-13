@@ -262,6 +262,10 @@ while (clock <= 16 and half <=2) or ot == 1:
 
 	#Roll initative for all players
 	for p in all_players:
+		# Reset from the previous round
+		p["r_shts"] = 0
+		p["r_hit"] = 0
+		p["r_init"] = -1000
 		if p["c_pos"] == "bench":
 			continue
 		else:
@@ -436,15 +440,9 @@ while (clock <= 16 and half <=2) or ot == 1:
 	a_team["points"] = a_team["points"] + a_team["r_points"] 
 	a_team["r_points"] = 0
 
-	# Reset player shot counts and hit counts
-	for p in all_players:
-		p["r_shts"] = 0
-		p["r_hit"] = 0
-		p["r_init"] = -1000
-
 	#Clock Advance
 	game_log("==============================","f",0)
-	game_log("end of round "+str(clock),"t",0)
+	game_log("end of round "+str(clock)+"- half "+str(half),"t",0)
 	game_log(h_team["name"]+": "+str(h_team["points"]),"t",0)
 	game_log(a_team["name"]+": "+str(a_team["points"]),"t",0)
 	game_log("==============================","f",0)
@@ -453,7 +451,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 	if clock == 17 and half == 1:
 		game_log("HALF TIME!","t",0)
 		half = 2
-		clock = 0
+		clock = 1
 		# Halftime adjustments - +4 to the highest total, -2 down to 1 for the lowest, don't touch ties
 	
 	#Code for overtime halfs would be good to.

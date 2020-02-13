@@ -1,0 +1,29 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Kenosha Killers
+tresaure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+# Tactic preferences
+tac1_pref:5
+tac2_pref:5
+tac3_pref:5
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Dic Krieger:54:66:47:72:48:1:16:reactive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Paris:16:0:0:NA
+roster-player:Trigger Parker:53:58:45:80:62:16:17:aggressive:NA:ambush:ambush:ambush:0:0:0:0:0:0:New Orleans:17:0:0:NA
+roster-player:Sarge Inronstag:45:48:45:51:66:14:11:aggressive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Chicago:16:0:0:NA
+roster-player:Dic Dawson:52:69:59:36:63:10:10:aggressive:NA:skirmish:charge:freefire:0:0:0:0:0:0:Mexico City:17:0:0:NA
+roster-player:Lucky Black:52:58:59:31:45:8:30:ambitious:NA:skirmish:charge:freefire:0:0:0:0:0:0:Hollywood:17:0:0:NA
+roster-player:Annabelle Soos:40:67:61:55:49:18:24:stoic:NA:skirmish:charge:freefire:0:0:0:0:0:0:Vegas:16:0:0:NA
+roster-player:Blue Domski:69:63:56:42:63:0:16:ambitious:NA:steal:steal:steal:0:0:0:0:0:0:Cleveland:16:0:0:NA
+roster-player:Sergei Arbor:55:64:45:42:64:13:26:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Marseille:18:0:0:NA
+roster-player:Wanye Allegheny:65:69:54:75:54:4:27:ambitious:NA:bench:bench:bench:0:0:0:0:0:0:Liverpool:18:0:0:NA
+roster-player:Benny Metropolous:66:62:55:74:49:5:24:eager:NA:bench:bench:bench:0:0:0:0:0:0:Champagn:18:0:0:NA
+roster-player:Mario River:70:56:52:32:67:3:21:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:St.Paul:20:0:0:NA
+roster-player:Peter Thunderfist:63:42:41:31:62:1:27:ambitious:NA:freefire:freefire:freefire:0:0:0:0:0:0:Madrid:18:0:0:NA
+#PROSPECTS
