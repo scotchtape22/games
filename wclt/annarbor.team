@@ -14,14 +14,14 @@ tac1_pref:5
 tac2_pref:5
 tac3_pref:5
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Paul Lutsen:46:55:49:43:55:17:17:ambitious:NA:steal:charge:skirmish:0:0:0:0:0:0:Detroit:17:0:0:NA
-roster-player:Mable Metropolous:55:48:52:56:50:18:18:reactive:NA:steal:charge:skirmish:0:0:0:0:0:0:Havanna:20:0:0:NA
-roster-player:Zyler Stallions:46:40:42:73:69:22:22:aggressive:NA:steal:charge:skirmish:0:0:0:0:0:0:Liverpool:19:0:0:NA
-roster-player:Bobby Sully:50:60:40:41:63:21:21:eager:NA:steal:charge:skirmish:0:0:0:0:0:0:Amsterdam:18:0:0:NA
-roster-player:Butch Thrash:59:59:40:37:62:23:23:eager:NA:ambush:ambush:ambush:0:0:0:0:0:0:Minneapolis:17:0:0:NA
-roster-player:Archie McTravis:61:67:56:32:65:19:19:eager:NA:ambush:ambush:ambush:0:0:0:0:0:0:Montreal:20:0:0:NA
-roster-player:Rufus Manistique:50:61:49:51:63:11:11:ambitious:NA:steal:steal:steal:0:0:0:0:0:0:Munich:17:0:0:NA
-roster-player:Dipper Nitro:48:53:68:34:49:30:30:stoic:NA:steal:steal:steal:0:0:0:0:0:0:Madrid:18:0:0:NA
+roster-player:Paul Lutsen:46:55:49:43:55:17:17:ambitious:NA:steal:charge:skirmish:0:27:22:17:4:64:Detroit:17:0:0:NA
+roster-player:Mable Metropolous:57:48:52:56:50:18:19:reactive:NA:steal:charge:skirmish:0:20:12:11:1:64:Havanna:20:0:0:NA
+roster-player:Zyler Stallions:46:40:42:73:69:22:22:aggressive:NA:steal:charge:skirmish:0:21:17:7:0:64:Liverpool:19:0:0:NA
+roster-player:Bobby Sully:50:60:41:41:63:21:21:eager:NA:steal:charge:skirmish:0:21:13:10:0:64:Amsterdam:18:0:0:NA
+roster-player:Butch Thrash:59:59:40:37:62:23:23:eager:NA:ambush:ambush:ambush:0:73:11:31:0:64:Minneapolis:17:0:0:NA
+roster-player:Archie McTravis:61:67:56:32:65:19:19:eager:NA:ambush:ambush:ambush:0:78:6:46:0:64:Montreal:20:0:0:NA
+roster-player:Rufus Manistique:51:61:49:51:63:11:11:ambitious:NA:steal:steal:steal:0:0:41:0:13:64:Munich:17:0:0:NA
+roster-player:Dipper Nitro:48:53:68:34:49:30:30:stoic:NA:steal:steal:steal:0:0:30:0:8:64:Madrid:18:0:0:NA
 roster-player:Rufus Gould:69:50:40:47:66:27:27:eager:NA:bench:bench:bench:0:0:0:0:0:0:Chicago:19:0:0:NA
 roster-player:Doug Hall:58:54:52:63:41:25:25:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Yokohama:16:0:0:NA
 roster-player:Slab Inronstag:49:63:65:80:61:13:13:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Havanna:18:0:0:NA

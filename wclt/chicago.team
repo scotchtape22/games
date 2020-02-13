@@ -15,14 +15,14 @@ tac2_pref:5
 tac3_pref:5
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
 roster-player:Vlad Gould:54:47:53:37:42:10:10:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Vancouver:19:0:0:NA
-roster-player:Lazer Manistique:56:46:62:39:68:25:25:aggressive:NA:charge:skirmish:freefire:0:21:11:11:0:32:Qubec City:17:0:0:NA
-roster-player:Ezikial Whitehall:54:54:63:44:56:12:12:ambitious:NA:charge:skirmish:freefire:0:31:13:15:0:32:Reims:18:0:0:NA
-roster-player:Sanic Steele:57:65:48:53:46:13:13:ambitious:NA:charge:skirmish:freefire:0:31:11:22:0:32:Atlanta:18:0:0:NA
-roster-player:Gary River:73:66:67:80:64:30:28:ambitious:NA:charge:skirmish:freefire:0:44:8:26:0:32:New Orleans:18:0:0:NA
-roster-player:Archie Sudbury:48:59:40:49:65:27:27:eager:NA:steal:steal:steal:0:0:24:0:8:32:Austin:16:0:0:NA
-roster-player:no-name MacIntyre:55:49:58:50:58:17:18:aggressive:NA:steal:steal:steal:0:0:25:0:5:32:Madrid:18:0:0:NA
-roster-player:Cheech Finlandia:51:40:47:73:68:22:22:reactive:NA:ambush:ambush:ambush:0:0:18:0:0:32:Amsterdam:20:0:0:NA
-roster-player:Bolt Beefcake:43:59:49:55:61:26:26:reactive:NA:ambush:ambush:ambush:0:0:18:0:0:32:Liverpool:20:0:0:NA
+roster-player:Lazer Manistique:57:47:62:39:68:27:26:aggressive:NA:charge:skirmish:freefire:0:45:12:23:0:64:Qubec City:17:0:0:NA
+roster-player:Ezikial Whitehall:55:55:63:44:56:12:12:ambitious:NA:charge:skirmish:freefire:0:57:14:27:0:64:Reims:18:0:0:NA
+roster-player:Sanic Steele:58:65:49:53:48:14:14:ambitious:NA:charge:skirmish:freefire:0:59:15:41:0:64:Atlanta:18:0:0:NA
+roster-player:Gary River:74:68:69:80:67:34:29:ambitious:NA:charge:skirmish:freefire:0:80:8:52:0:64:New Orleans:18:0:0:NA
+roster-player:Archie Sudbury:48:59:40:49:65:27:27:eager:NA:steal:steal:steal:0:0:41:0:13:64:Austin:16:0:0:NA
+roster-player:no-name MacIntyre:56:52:58:50:58:18:18:aggressive:NA:steal:steal:steal:0:0:43:0:7:64:Madrid:18:0:0:NA
+roster-player:Cheech Finlandia:51:40:47:73:68:22:22:reactive:NA:ambush:ambush:ambush:0:47:22:13:0:64:Amsterdam:20:0:0:NA
+roster-player:Bolt Beefcake:43:59:49:55:63:26:27:reactive:NA:ambush:ambush:ambush:0:38:22:22:0:64:Liverpool:20:0:0:NA
 roster-player:Paul Erie:56:55:54:50:47:26:26:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Fukuoka:20:0:0:NA
 roster-player:Mordecai Duluth:51:40:46:76:55:10:10:eager:NA:bench:bench:bench:0:0:0:0:0:0:Roswell:17:0:0:NA
 roster-player:Ted Thatcher:67:64:56:75:67:22:22:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Barcelona:16:0:0:NA
