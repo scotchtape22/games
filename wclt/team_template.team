@@ -13,7 +13,7 @@ stadium:0:1
 tac1_pref:5
 tac2_pref:5
 tac3_pref:5
-#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
 roster-player:Paul Lutsen:46:55:49:43:55:17:17:ambitious:NA:bench:bench:bench:0:0:0:0:0:0:Detroit:17:0:0:NA
 roster-player:Mable Metropolous:55:48:52:56:50:18:18:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Havanna:20:0:0:NA
 roster-player:Zyler Stallions:46:40:42:73:69:22:22:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Liverpool:19:0:0:NA

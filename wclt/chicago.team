@@ -13,7 +13,7 @@ stadium:0:1
 tac1_pref:5
 tac2_pref:5
 tac3_pref:5
-#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
 roster-player:Vlad Gould:54:47:53:37:42:10:10:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Vancouver:19:0:0:NA
 roster-player:Lazer Manistique:56:46:62:39:68:25:25:aggressive:NA:charge:skirmish:freefire:0:0:0:0:0:0:Qubec City:17:0:0:NA
 roster-player:Ezikial Whitehall:54:54:63:44:56:12:12:ambitious:NA:charge:skirmish:freefire:0:0:0:0:0:0:Reims:18:0:0:NA

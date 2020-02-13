@@ -152,8 +152,8 @@ for x in h_load:
 		"r_init":0,"r_shts":0,"r_hit":0,
 		"c_pos":"","tac1":xi[11],"tac2":xi[12],"tac3":xi[13],
 		"exp":0,"fat":0,
-		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
-		"c_ht":int(xi[17]),"c_ph":int(xi[18]),"c_fc":int(xi[19]),"c_st":int(xi[20]),"c_rd":int(xi[21])}
+		"inj":int(xi[14]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
+		"c_ht":int(xi[16]),"c_ph":int(xi[17]),"c_fc":int(xi[18]),"c_st":int(xi[15]),"c_rd":int(xi[19])}
 		all_players.append(new_player)
 
 #Load Away Team
@@ -194,11 +194,19 @@ for x in a_load:
 		"r_init":0,"r_shts":0,"r_hit":0,
 		"c_pos":"","tac1":xi[11],"tac2":xi[12],"tac3":xi[13],
 		"exp":0,"fat":0,
-		"inj":int(xi[15]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
-		"c_ht":int(xi[17]),"c_ph":int(xi[18]),"c_fc":int(xi[19]),"c_st":int(xi[20]),"c_rd":int(xi[21])}
+		"inj":int(xi[14]),"g_ht":0,"g_ph":0,"g_fc":0,"g_st":0,"g_rd":0,"g_cost":int(xi[22]),
+		"c_ht":int(xi[16]),"c_ph":int(xi[17]),"c_fc":int(xi[18]),"c_st":int(xi[15]),"c_rd":int(xi[19])}
 		all_players.append(new_player)
 #Be sure to close files at the end
 
+#Save starting preferences for tactics
+h_t1_s = h_team["tac1_pref"]
+h_t2_s = h_team["tac2_pref"]
+h_t3_s = h_team["tac3_pref"]
+
+a_t1_s = a_team["tac1_pref"]
+a_t2_s = a_team["tac2_pref"]
+a_t3_s = a_team["tac3_pref"]
 
 clock = 1
 half = 1
@@ -217,38 +225,60 @@ while (clock <= 16 and half <=2) or ot == 1:
 		for p in all_players:
 			if p["team"] == "away":
 				p["c_pos"] = p["tac1"]
-				a_team["r_pref"] = "tac1"
+		a_team["r_pref"] = "tac1"
+		game_log("Away team chose tactic 1","t",0)
 	elif a_tac_roll < a_team["tac1_pref"]+a_team["tac2_pref"] and a_tac_roll > a_team["tac1_pref"]:
 		for p in all_players:
 			if p["team"] == "away":
 				p["c_pos"] = p["tac2"]
-				a_team["r_pref"] = "tac2"
+		a_team["r_pref"] = "tac2"
+		game_log("Away team chose tactic 2","t",0)
 	else:
 		for p in all_players:
 			if p["team"] == "away":
 				p["c_pos"] = p["tac3"]
-				a_team["r_pref"] = "tac3"
+		a_team["r_pref"] = "tac3"
+		game_log("Away team chose tactic 3","t",0)
+
+	#Count players for away team - this is debugging!
+	b = 0
+	a = 0
+	s = 0
+	f = 0
+	for p in all_players:
+		if p["team"] == "away":
+			if p["c_pos"] == "bench":
+				b = b + 1
+			elif p["c_pos"] == "ambush":
+				a = a + 1
+			elif p["c_pos"] == "steal":
+				s = s + 1
+			else:
+				f = f + 1
+	print("Away team will have "+str(b)+" on the bench "+str(a)+" on ambush "+str(s)+" on steal "+str(f)+" elsewhere")
 
 	h_tac_roll = random.randint(0,h_tac_range)
 	if h_tac_roll < h_team["tac1_pref"]:
 		for p in all_players:
 			if p["team"] == "home":
 				p["c_pos"] = p["tac1"]
-				h_team["r_pref"] = "tac1"
+		h_team["r_pref"] = "tac1"
+		game_log("Home team chose tactic 1","t",0)
 	elif h_tac_roll < h_team["tac1_pref"]+h_team["tac2_pref"] and h_tac_roll > h_team["tac1_pref"]:
 		for p in all_players:
 			if p["team"] == "home":
 				p["c_pos"] = p["tac2"]
-				h_team["r_pref"] = "tac2"
+		h_team["r_pref"] = "tac2"
+		game_log("Home team chose tactic 2","t",0)
 	else:
 		for p in all_players:
 			if p["team"] == "home":
 				p["c_pos"] = p["tac3"]
-				h_team["r_pref"] = "tac3"
+		h_team["r_pref"] = "tac3"
+		game_log("Home team chose tactic 3","t",0)
 
 	#Roll initative for all players
 	for p in all_players:
-		#print(p['name']+" will be "+p['c_pos'])
 		if p["c_pos"] == "bench":
 			continue
 		else:
@@ -390,38 +420,38 @@ while (clock <= 16 and half <=2) or ot == 1:
 	# -1 down to 1 if you lost the round with this tactic
 	# No change for ties
 
-	if home["r_points"] > away["r_points"]:
-		if home["r_pref"] == "tac1":
-			home["tac1_pref"] = home["tac1_pref"] + 1
-		elif home["r_pref"] == "tac2":
-			home["tac2_pref"] = home["tac2_pref"] + 1
-		elif home["r_pref"] == "tac3":
-			home["tac3_pref"] = home["tac3_pref"] + 1
-		if away["r_pref"] == "tac1" and away["tac1_pref"] > 1:
-			away["tac1_pref"] = away["tac1_pref"] - 1
-		elif away["r_pref"] == "tac2" and away["tac2_pref"] > 1:
-			away["tac2_pref"] = away["tac2_pref"] - 1
-		elif away["r_pref"] == "tac3" and away["tac3_pref"] > 1:
-			away["tac3_pref"] = away["tac3_pref"] - 1
-	elif home["r_points"] < away["r_points"]:
-		if away["r_pref"] == "tac1":
-			away["tac1_pref"] = away["tac1_pref"] + 1
-		elif away["r_pref"] == "tac2":
-			away["tac2_pref"] = away["tac2_pref"] + 1
-		elif away["r_pref"] == "tac3":
-			away["tac3_pref"] = away["tac3_pref"] + 1
-		if home["r_pref"] == "tac1" and home["tac1_pref"] > 1:
-			home["tac1_pref"] = home["tac1_pref"] - 1
-		elif home["r_pref"] == "tac2" and home["tac2_pref"] > 1:
-			home["tac2_pref"] = home["tac2_pref"] - 1
-		elif home["r_pref"] == "tac3" and home["tac3_pref"] > 1:
-			home["tac3_pref"] = home["tac3_pref"] - 1
+	if h_team["r_points"] > a_team["r_points"]:
+		if h_team["r_pref"] == "tac1":
+			h_team["tac1_pref"] = h_team["tac1_pref"] + 1
+		elif h_team["r_pref"] == "tac2":
+			h_team["tac2_pref"] = h_team["tac2_pref"] + 1
+		elif h_team["r_pref"] == "tac3":
+			h_team["tac3_pref"] = h_team["tac3_pref"] + 1
+		if a_team["r_pref"] == "tac1" and a_team["tac1_pref"] > 1:
+			a_team["tac1_pref"] = a_team["tac1_pref"] - 1
+		elif a_team["r_pref"] == "tac2" and a_team["tac2_pref"] > 1:
+			a_team["tac2_pref"] = a_team["tac2_pref"] - 1
+		elif a_team["r_pref"] == "tac3" and a_team["tac3_pref"] > 1:
+			a_team["tac3_pref"] = a_team["tac3_pref"] - 1
+	elif h_team["r_points"] < a_team["r_points"]:
+		if a_team["r_pref"] == "tac1":
+			a_team["tac1_pref"] = a_team["tac1_pref"] + 1
+		elif a_team["r_pref"] == "tac2":
+			a_team["tac2_pref"] = a_team["tac2_pref"] + 1
+		elif a_team["r_pref"] == "tac3":
+			a_team["tac3_pref"] = a_team["tac3_pref"] + 1
+		if h_team["r_pref"] == "tac1" and h_team["tac1_pref"] > 1:
+			h_team["tac1_pref"] = h_team["tac1_pref"] - 1
+		elif h_team["r_pref"] == "tac2" and h_team["tac2_pref"] > 1:
+			h_team["tac2_pref"] = h_team["tac2_pref"] - 1
+		elif h_team["r_pref"] == "tac3" and h_team["tac3_pref"] > 1:
+			h_team["tac3_pref"] = h_team["tac3_pref"] - 1
 
 	# Add the round score into the total, reset
-	home["points"] = home["points"] + home["r_points"] 
-	home["r_points"] = 0
-	away["points"] = away["points"] + away["r_points"] 
-	away["r_points"] = 0
+	h_team["points"] = h_team["points"] + h_team["r_points"] 
+	h_team["r_points"] = 0
+	a_team["points"] = a_team["points"] + a_team["r_points"] 
+	a_team["r_points"] = 0
 
 	#Clock Advance
 	game_log("==============================","f",0)
@@ -434,6 +464,7 @@ while (clock <= 16 and half <=2) or ot == 1:
 	if clock == 17 and half == 1:
 		game_log("HALF TIME!","t",0)
 		half = 2
+		clock = 0
 		# Halftime adjustments - +4 to the highest total, -2 down to 1 for the lowest, don't touch ties
 	
 	#Code for overtime halfs would be good to.
@@ -460,6 +491,7 @@ game_log("==============================","f",0)
 
 #Sort players for better stat view
 #Stats
+game_log("==============================","f",0)
 game_log("FINAL STATS - "+h_team["name"]+":","t",0)
 game_log("Player\t\t\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t",0)
 for p in all_players:
@@ -471,7 +503,7 @@ for p in all_players:
 		pp = p["g_ph"]+(p["g_fc"]*4)
 		ppm = pp - p["g_ht"]
 		game_log(p["name"]+":\t\t"+str(p["g_ph"])+"\t"+str(p["g_st"])+"\t"+str(p["g_fc"])+"\t"+str(sp)+"\t"+str(pp)+"\t"+str(p["g_ht"])+"\t"+str(ppm),"t",0)
-
+game_log("==============================","f",0)
 game_log("FINAL STATS - "+a_team["name"]+":","t",0)
 game_log("Player\t\t\t\tHits\tShots\tFlags\tShooting %\tPoints Earned\tHits Taken\tHit +/-","t",0)
 for p in all_players:
@@ -483,6 +515,15 @@ for p in all_players:
 		pp = p["g_ph"]+(p["g_fc"]*4)
 		ppm = pp - p["g_ht"]
 		game_log(p["name"]+":\t\t"+str(p["g_ph"])+"\t"+str(p["g_st"])+"\t"+str(p["g_fc"])+"\t"+str(sp)+"\t"+str(pp)+"\t"+str(p["g_ht"])+"\t"+str(ppm),"t",0)
+game_log("==============================","f",0)
+game_log("Tactic Preferences","f",0)
+game_log(h_team["tac1_pref"],"f",0)
+game_log(h_team["tac2_pref"],"f",0)
+game_log(h_team["tac3_pref"],"f",0)
+game_log(a_team["tac1_pref"],"f",0)
+game_log(a_team["tac2_pref"],"f",0)
+game_log(a_team["tac3_pref"],"f",0)
+game_log("==============================","f",0)
 
 # Money Earned
 # Roll for gaining credits
