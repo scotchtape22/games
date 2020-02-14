@@ -14,16 +14,16 @@ tac1_pref:5
 tac2_pref:5
 tac3_pref:5
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Dic Krieger:55:67:50:72:49:2:16:reactive:NA:ambush:ambush:ambush:0:65:26:39:0:128:Paris:16:0:0:NA
-roster-player:Trigger Parker:54:59:45:80:62:17:19:aggressive:NA:ambush:ambush:ambush:0:47:31:21:0:128:New Orleans:17:0:0:NA
-roster-player:Sarge Inronstag:45:49:45:51:66:16:12:aggressive:NA:ambush:ambush:ambush:0:55:36:18:0:128:Chicago:16:0:0:NA
-roster-player:Dic Dawson:63:75:60:36:65:13:12:aggressive:NA:skirmish:charge:freefire:0:89:30:55:0:128:Mexico City:17:0:0:NA
-roster-player:Lucky Black:52:59:59:31:47:10:34:ambitious:NA:skirmish:charge:freefire:0:101:35:53:0:128:Hollywood:17:0:0:NA
-roster-player:Annabelle Soos:40:72:61:55:50:19:25:stoic:NA:skirmish:charge:freefire:0:74:40:53:0:128:Vegas:16:0:0:NA
-roster-player:Blue Domski:73:66:61:42:67:14:17:ambitious:NA:steal:steal:steal:0:0:106:0:72:128:Cleveland:16:0:0:NA
+roster-player:Dic Krieger:56:67:56:72:52:9:21:reactive:NA:ambush:ambush:ambush:0:224:82:133:0:352:Paris:16:0:0:NA
+roster-player:Trigger Parker:62:61:49:80:67:20:25:aggressive:NA:ambush:ambush:ambush:0:216:67:116:0:352:New Orleans:17:0:0:NA
+roster-player:Sarge Inronstag:47:51:46:51:67:16:13:aggressive:NA:ambush:ambush:ambush:0:177:105:75:0:352:Chicago:16:0:0:NA
+roster-player:Dic Dawson:73:82:63:36:72:26:19:aggressive:NA:skirmish:charge:freefire:0:267:74:153:0:352:Mexico City:17:0:0:NA
+roster-player:Lucky Black:56:71:66:31:52:22:37:ambitious:NA:skirmish:charge:freefire:0:286:93:159:0:352:Hollywood:17:0:0:NA
+roster-player:Annabelle Soos:42:78:63:55:53:21:28:stoic:NA:skirmish:charge:freefire:0:192:120:128:0:352:Vegas:16:0:0:NA
+roster-player:Blue Domski:96:91:90:42:92:47:34:ambitious:NA:steal:steal:steal:0:0:325:0:189:352:Cleveland:16:0:0:NA
 roster-player:Sergei Arbor:55:64:45:42:64:13:26:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Marseille:18:0:0:NA
 roster-player:Wanye Allegheny:65:69:54:75:54:4:27:ambitious:NA:bench:bench:bench:0:0:0:0:0:0:Liverpool:18:0:0:NA
 roster-player:Benny Metropolous:66:62:55:74:49:5:24:eager:NA:bench:bench:bench:0:0:0:0:0:0:Champagn:18:0:0:NA
 roster-player:Mario River:70:56:52:32:67:3:21:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:St.Paul:20:0:0:NA
-roster-player:Peter Thunderfist:66:45:43:31:63:2:27:ambitious:NA:freefire:freefire:freefire:0:133:27:51:0:128:Madrid:18:0:0:NA
+roster-player:Peter Thunderfist:71:48:44:31:68:10:28:ambitious:NA:freefire:freefire:freefire:0:409:65:142:0:352:Madrid:18:0:0:NA
 #PROSPECTS

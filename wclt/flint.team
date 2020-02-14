@@ -14,21 +14,21 @@ tac1_pref:1
 tac2_pref:1
 tac3_pref:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Gary Hall:47:44:52:51:40:3:25:eager:NA:ambush:ambush:ambush:0:125:20:43:0:160:Vegas:18:0:0:NA
+roster-player:Gary Hall:49:44:53:51:40:3:27:eager:NA:ambush:ambush:ambush:0:236:70:80:0:352:Vegas:18:0:0:NA
 
-roster-player:Squid Booteh:62:63:68:77:67:19:18:aggressive:NA:ambush:ambush:ambush:0:159:18:73:0:160:Marseille:19:0:0:NA
+roster-player:Squid Booteh:68:67:70:77:80:26:24:aggressive:NA:ambush:ambush:ambush:0:310:51:146:0:352:Marseille:19:0:0:NA
 
-roster-player:Mable Beefcake:40:55:67:40:45:20:30:stoic:NA:steal:steal:steal:0:0:66:0:20:160:Hanshin:16:0:0:NA
+roster-player:Mable Beefcake:41:57:67:40:46:22:31:stoic:NA:steal:steal:steal:0:0:195:0:44:352:Hanshin:16:0:0:NA
 
-roster-player:Wanye Thatcher:68:55:48:73:61:19:18:ambitious:NA:steal:steal:steal:0:0:124:0:34:160:Champagne:19:0:0:NA
+roster-player:Wanye Thatcher:75:60:52:73:62:25:22:ambitious:NA:steal:steal:steal:0:0:317:0:69:352:Champagne:19:0:0:NA
 
-roster-player:Blue Vanderhuge:65:54:68:57:57:7:17:aggressive:NA:charge:snipe:skirmish:0:89:10:37:0:160:Miami:19:0:0:NA
+roster-player:Blue Vanderhuge:69:60:73:57:64:13:22:aggressive:NA:charge:snipe:skirmish:0:211:35:90:0:352:Miami:19:0:0:NA
 
-roster-player:Dirk Cooles:55:62:60:35:48:7:16:eager:NA:charge:snipe:skirmish:0:79:10:43:0:160:Vancouver:20:0:0:NA
+roster-player:Dirk Cooles:58:64:63:35:55:8:22:eager:NA:charge:snipe:skirmish:0:185:57:87:0:352:Vancouver:20:0:0:NA
 
-roster-player:Xyler Allegheny:51:62:53:33:70:11:31:eager:NA:charge:snipe:skirmish:0:72:17:44:0:160:Hamburg:16:0:0:NA
+roster-player:Xyler Allegheny:55:65:55:33:70:12:33:eager:NA:charge:snipe:skirmish:0:170:70:95:0:352:Hamburg:16:0:0:NA
 
-roster-player:Beef St.Croix:47:53:68:64:64:5:32:aggressive:NA:charge:snipe:skirmish:0:65:16:35:0:160:Seattle:16:0:0:NA
+roster-player:Beef St.Croix:59:61:71:64:69:12:39:aggressive:NA:charge:snipe:skirmish:0:170:51:89:0:352:Seattle:16:0:0:NA
 
 roster-player:Slab Primm:54:55:40:48:54:2:18:eager:NA:bench:bench:bench:0:0:0:0:0:0:Toronto:18:0:0:NA
 
