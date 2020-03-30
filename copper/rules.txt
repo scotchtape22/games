@@ -1,3 +1,16 @@
 Copper and Coal
 
-In Copper and Coal, players lead an emprie in the sky above earth.
+Overview:
+In Copper and Coal, players lead an emprie in the sky above Earth.  They will need to manage their economy, military, and diplomatic relations to be the first nation to return to Earth.
+
+How to Win:
+Each game, a set number of automatons will need to be sent to The Surface to re-establish civilization on Earth.  When this number has been reached, the player who contributed the most automatons is declared victorious.  Alternativly, the last nation with a president will win.
+
+Seasons:
+The game is divided into season, each season follows the same phases.
+Planning Phase - During the planning phase you may talk with other nations, plan resource usage, and plan troop movements
+Weather Phase - The weather changes, line of sight and defenses at settlements are updated
+Movement Phase - During the movement phase, your fleets and automatons will move about the sky or to the surface.  Trade ships are sent to other players.
+Production Phase - During the production phase, ports will produce new airships and automatons
+Resource Phase - During the resource phase, foundaries and purifiers will produce brass and coal, tradeships will arrive at their destination.  These resources may be used in the next round.
+Recovery Phase - Weather for next season is declared.
