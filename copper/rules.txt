@@ -9,7 +9,8 @@ Each game, a set number of automatons will need to be sent to The Surface to re-
 Seasons:
 The game is divided into season, each season follows the same phases.
 Planning Phase - During the planning phase you may talk with other nations, plan resource usage, and plan troop movements.
-Weather Phase - The weather changes, line of sight and defenses at settlements are updated.
+Weather Phase - The weather changes.
+Power Phase - Defenses update, LOS Updates, edicts and prisoner actions are run.
 Movement Phase - During the movement phase, your fleets and automatons will move about the sky or to the surface.  Trade ships are sent to other players.
 Production Phase - During the production phase, ports will produce new airships, VIPs, and automatons.
 Resource Phase - During the resource phase, foundaries and purifiers will produce brass and coal, tradeships will arrive at their destination.  These resources may be used in the next round.
