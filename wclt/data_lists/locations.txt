@@ -1,57 +1,202 @@
-Milwaukee
-Chicago
-Champagn
-St.Paul
-Duluth
-Miami
-Detroit
-Seattle
-Brooklyn
-Montreal
-Vegas
-Vancouver
-Havanna
-Atlanta
-Toronto
-Mexico City
-Vera Cruz
-Austin
-South Beach
-Cleveland
-Toledo
-Hollywood
-Minneapolis
-Qubec City
-Portland
-Roswell
-Boston
-New Orleans
-Silicon Valley
-Chicago
-Denver
-Tokyo
-Hiroshima
-Saitama
-Fukuoka
-Yomiuri
-Sapporo
-Yokohama
-Osaka
-Chunichi
-Chiba Lotte
-Hanshin
-Sendai
-Madrid
-Milan
-Liverpool
-Munich
-Barcelona
-Manchester
-London
-Nottingham
-Hamburg
-Reims
-Paris
-Marseille
-Brussels
+Abilene
+Allentown
+Amarillo
 Amsterdam
+Anchorage
+Ann Arbor
+Appleton
+Ashland
+Atlanta
+Austin
+Baraga
+Barcelona
+Bemidji
+Big Lake
+Bismark
+Boise
+Boston
+Boulder
+Bowling Green
+Brooklyn
+Brussels
+Buffalo
+Calumet
+Cape Canaveral
+Caracas
+Carlsbad
+Cedar Falls
+Champagn
+Champagne
+Charelston
+Charlottesville
+Chassel
+Chattanooga
+Chiba Lotte
+Chicago
+Chippewa Falls
+Chunichi
+Cinncinati
+Cleveland
+Columbus
+Cooperstown
+Davenport
+Denver
+Des Moise
+Detroit
+Dresden
+Dubque
+Duluth
+Durango
+Durham
+Dyersville
+Eagleton
+Eau Claire
+El Paso
+Erie
+Escanaba
+Fairbanks
+Fargo
+Flint
+Fort Wayne
+Frankfurt
+Fukuoka
+Galena
+Gary
+Gettysburg
+Grand Forks
+Grand Haven
+Grand Rapids
+Green Bay
+Greenfield Village
+Greensboro
+Hamburg
+Hamilton
+Hancock
+Hanshin
+Harlem
+Hartford
+Havanna
+Havannaba
+Hiroshima
+Hollywood
+Houghton
+Houston
+Huntsville
+Indianapolis
+Joliet
+Juarez
+Kalamazoo
+Kansas City
+Kingston
+Knoxville
+L\'Anse
+Lafayette
+Las Vegas
+Letterkenny
+Lincoln
+Liverpool
+London
+Louisville
+Lutsen
+Mackinac
+Madison
+Madrid
+Manchester
+Manhatten
+Manistique
+Mankato
+Marquette
+Marseille
+Marshfield
+Memphis
+Mexico City
+Miami
+Milan
+Milwaukee
+Minneapolis
+Montreal
+Munich
+Nashville
+New Orleans
+Nottingham
+Oklahoma City
+Omaha
+Ontanogan
+Orlando
+Osaka
+Paducah
+Paris
+Pawnee
+Peoria
+Pheonix
+Plymouth
+Port-Au-Prince
+Portage
+Portland
+Promontory
+Puerto Plata
+Qubec City
+Queens
+Rapid City
+Reims
+Rhinelander
+Roanoke
+Rockford
+Roswell
+Saitama
+Salt Lake City
+San Domingo
+San Francisco
+Sandusky
+Santa Fe
+Sapporo
+Sarnia
+Sault Ste. Marie
+Seattle
+Sendai
+Shilo
+Silicon Valley
+Silver City
+Sioux City
+Sioux Falls
+South Beach
+South Bend
+Springfield
+St.Clair
+St.Cloud
+St.Croix
+St.Louis
+St.Paul
+Superior
+Tallahassee
+Taos
+The Bronz
+Thunder Bay
+Tiajuana
+Tokyo
+Toledo
+Tombstone
+Topeka
+Toronto
+Traverse City
+Trinidad
+Tulsa
+Tuscaloosa
+Tuscon
+Vancouver
+Vegas
+Vera Cruz
+Vera Cruzxico
+Wabash
+Wallawalla
+Wausau
+Wilks-Barre
+Willaimsburg
+Windsor
+Winston-Salem
+Wisconsin Dells
+Witchita
+Wolf Creek Pass
+Worchester
+Yokohama
+Yomiuri
