@@ -1,0 +1,1 @@
+python3 wclt.py will let you pit 2 teams against each other.  Teams are stored in the .team files which contain the player instructions as well as their stats.

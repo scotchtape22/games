@@ -14,14 +14,14 @@ tac1_pref:1
 tac2_pref:1
 tac3_pref:1
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Phinneas River:42:67:51:66:43:8:27:aggressive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Madrid:16:0:0:NA
-roster-player:Annabelle Temple:44:52:40:63:47:15:17:ambitious:NA:snipe:charge:freefire:0:0:0:0:0:0:Brooklyn:16:0:0:NA
-roster-player:Robin Plante:61:42:63:62:42:10:30:reactive:NA:snipe:charge:freefire:0:0:0:0:0:0:Chicago:16:0:0:NA
-roster-player:Captain Krieger:57:60:57:48:52:6:18:reactive:NA:snipe:charge:freefire:0:0:0:0:0:0:Brussels:20:0:0:NA
-roster-player:Blast Greenberg:69:43:50:55:41:12:18:reactive:NA:snipe:charge:freefire:0:0:0:0:0:0:Munich:17:0:0:NA
-roster-player:Lucky Cox:47:64:60:41:49:0:16:stoic:NA:snipe:charge:freefire:0:0:0:0:0:0:Nottingham:17:0:0:NA
-roster-player:Wendy Hardcheese:69:40:66:33:63:10:23:stoic:NA:snipe:charge:freefire:0:0:0:0:0:0:Cleveland:16:0:0:NA
-roster-player:William Hancock:44:65:66:51:61:0:17:eager:NA:snipe:charge:freefire:0:0:0:0:0:0:Portland:18:0:0:NA
+roster-player:Phinneas River:43:69:51:66:44:10:30:aggressive:NA:ambush:ambush:ambush:0:411:110:257:0:352:Madrid:16:0:0:NA
+roster-player:Annabelle Temple:45:52:41:63:48:15:17:ambitious:NA:snipe:charge:freefire:0:293:87:126:0:352:Brooklyn:16:0:0:NA
+roster-player:Robin Plante:64:44:67:62:45:11:32:reactive:NA:snipe:charge:freefire:0:296:38:105:0:352:Chicago:16:0:0:NA
+roster-player:Captain Krieger:58:60:61:48:54:8:21:reactive:NA:snipe:charge:freefire:0:288:55:151:0:352:Brussels:20:0:0:NA
+roster-player:Blast Greenberg:73:45:52:55:43:15:19:reactive:NA:snipe:charge:freefire:0:329:34:135:0:352:Munich:17:0:0:NA
+roster-player:Lucky Cox:49:71:64:41:53:4:16:stoic:NA:snipe:charge:freefire:0:225:70:144:0:352:Nottingham:17:0:0:NA
+roster-player:Wendy Hardcheese:71:52:70:33:71:16:31:stoic:NA:snipe:charge:freefire:0:336:40:130:0:352:Cleveland:16:0:0:NA
+roster-player:William Hancock:50:68:68:51:62:2:20:eager:NA:snipe:charge:freefire:0:255:73:149:0:352:Portland:18:0:0:NA
 roster-player:Wanye Lom:52:63:62:57:60:0:15:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Hollywood:20:0:0:NA
 roster-player:Missy Su:52:62:46:33:70:15:21:ambitious:NA:bench:bench:bench:0:0:0:0:0:0:Atlanta:16:0:0:NA
 roster-player:Red Hoth:57:58:67:62:50:5:26:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Champagn:20:0:0:NA

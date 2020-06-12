@@ -1,0 +1,41 @@
+#Team Roster
+# To Comment
+# Will be replaced by a database
+# Delimiter is ':'
+name:Flint Calvary
+tresaure:0
+#COACH_SPOT Coach_Name INT ACC EVA POT FIT EGO KNO PERSONALITY GAME_COST CONTRACT_LENGTH
+medic:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+mentor:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+marketeer:NA:-1:-1:-1:-1:-1:-1:-1:NA:0:0
+stadium:0:1
+# Tactic preferences
+tac1_pref:1
+tac2_pref:1
+tac3_pref:1
+#ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
+roster-player:Gary Hall:47:44:52:51:40:3:25:eager:NA:ambush:ambush:ambush:0:9:9:4:0:32:Vegas:18:0:0:NA
+
+roster-player:Squid Booteh:57:62:66:77:66:17:18:aggressive:NA:ambush:ambush:ambush:0:15:10:11:0:32:Marseille:19:0:0:NA
+
+roster-player:Mable Beefcake:40:53:67:40:44:19:30:stoic:NA:steal:steal:steal:0:0:25:0:5:32:Hanshin:16:0:0:NA
+
+roster-player:Wanye Thatcher:63:54:46:73:61:19:17:ambitious:NA:steal:steal:steal:0:0:46:0:3:32:Champagne:19:0:0:NA
+
+roster-player:Blue Vanderhuge:61:52:67:57:56:6:17:aggressive:NA:charge:snipe:skirmish:0:25:6:10:0:32:Miami:19:0:0:NA
+
+roster-player:Dirk Cooles:50:60:59:35:48:6:15:eager:NA:charge:snipe:skirmish:0:24:5:11:0:32:Vancouver:20:0:0:NA
+
+roster-player:Xyler Allegheny:51:62:51:33:70:11:31:eager:NA:charge:snipe:skirmish:0:20:9:10:0:32:Hamburg:16:0:0:NA
+
+roster-player:Beef St.Croix:46:53:67:64:62:2:30:aggressive:NA:charge:snipe:skirmish:0:20:6:6:0:32:Seattle:16:0:0:NA
+
+roster-player:Slab Primm:54:55:40:48:54:2:18:eager:NA:bench:bench:bench:0:0:0:0:0:0:Toronto:18:0:0:NA
+
+roster-player:Flint Sisu:68:47:63:53:66:3:18:stoic:NA:bench:bench:bench:0:0:0:0:0:0:Marseille:18:0:0:NA
+
+roster-player:Bobby Abney:52:70:42:58:51:4:17:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Manchester:19:0:0:NA
+
+roster-player:Trigger Beefboi:68:68:69:45:44:4:13:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Qubec City:19:0:0:NA
+
+#PROSPECTS

@@ -775,7 +775,7 @@ if sv_choice == "Y":
 			#Find the player in all players that matches
 			for p in all_players:
 				if p["name"] == xi[1] and p["team"] == "home":
-					updated_player = "roster-player:"+p["name"]+":"+str(p["s_int"])+":"+str(p["s_acc"])+":"+str(p["s_eva"])+":"+str(p["s_pot"])+":"+str(p["s_fit"])+":"+str(p["s_ego"])+":"+str(p["s_kno"])+":"+p["per"]+":"+xi[10]+":"+xi[11]+":"+xi[12]+":"+xi[13]+":"+xi[14]+":"+str(p["inj"])+":"+str(p["c_ht"])+":"+str(p["c_ph"])+":"+str(p["c_fc"])+":"+str(p["c_st"])+":"+str(p["c_rd"])+":"+xi[21]+":"+xi[22]+":"+xi[23]+":"+xi[24]
+					updated_player = "roster-player:"+p["name"]+":"+str(p["s_int"])+":"+str(p["s_acc"])+":"+str(p["s_eva"])+":"+str(p["s_pot"])+":"+str(p["s_fit"])+":"+str(p["s_ego"])+":"+str(p["s_kno"])+":"+p["per"]+":"+p["drug"]+":"+p["tac1"]+":"+p["tac2"]+":"+p["tac3"]+":"+str(p["inj"])+":"+str(p["c_st"])+":"+str(p["c_ht"])+":"+str(p["c_ph"])+":"+str(p["c_fc"])+":"+str(p["c_rd"])+":"+xi[20]+":"+xi[21]+":"+xi[22]+":"+xi[23]+":"+xi[24]
 					h_load.write(updated_player)
 
 		else:
@@ -795,8 +795,9 @@ if sv_choice == "Y":
 			#Find the player in all players that matches
 			for p in all_players:
 				if p["name"] == xi[1] and p["team"] == "away":
-					updated_player = "roster-player:"+p["name"]+":"+str(p["s_int"])+":"+str(p["s_acc"])+":"+str(p["s_eva"])+":"+str(p["s_pot"])+":"+str(p["s_fit"])+":"+str(p["s_ego"])+":"+str(p["s_kno"])+":"+p["per"]+":"+xi[10]+":"+xi[11]+":"+xi[12]+":"+xi[13]+":"+xi[14]+":"+str(p["inj"])+":"+str(p["c_ht"])+":"+str(p["c_ph"])+":"+str(p["c_fc"])+":"+str(p["c_st"])+":"+str(p["c_rd"])+":"+xi[21]+":"+xi[22]+":"+xi[23]+":"+xi[24]
+					updated_player = "roster-player:"+p["name"]+":"+str(p["s_int"])+":"+str(p["s_acc"])+":"+str(p["s_eva"])+":"+str(p["s_pot"])+":"+str(p["s_fit"])+":"+str(p["s_ego"])+":"+str(p["s_kno"])+":"+p["per"]+":"+p["drug"]+":"+p["tac1"]+":"+p["tac2"]+":"+p["tac3"]+":"+str(p["inj"])+":"+str(p["c_st"])+":"+str(p["c_ht"])+":"+str(p["c_ph"])+":"+str(p["c_fc"])+":"+str(p["c_rd"])+":"+xi[20]+":"+xi[21]+":"+xi[22]+":"+xi[23]+":"+xi[24]
 					a_load.write(updated_player)
+
 
 		else:
 			a_load.write(x)

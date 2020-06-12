@@ -14,16 +14,28 @@ tac1_pref:5
 tac2_pref:5
 tac3_pref:5
 #ROSTER:NAME:INT:ACC:EVA:POT:FIT:EGO:KNO:PERSONALITY:DRUG:Tac1:Tac2:Tac3:INJ:Shots-Taken:Hits-Taken:Players-Hit:Flags-Captured:Rounds-Played:Hometown:GAME_COST:CONTRACT_LENGTH:CONTRACT_TYPE
-roster-player:Doug Sherpa:48:44:67:44:43:6:30:reactive:NA:ambush:ambush:ambush:0:0:0:0:0:0:Denver:19:0:0:NA
-roster-player:Rufus Gould:67:58:58:51:62:4:25:stoic:NA:ambush:ambush:ambush:0:0:0:0:0:0:Chicago:20:0:0:NA
-roster-player:Bobby Calumet:47:63:49:70:68:20:23:ambitious:NA:ambush:ambush:ambush:0:0:0:0:0:0:Fukuoka:16:0:0:NA
-roster-player:Ted Macklin:66:56:60:32:53:20:26:stoic:NA:steal:charge:fireteam:0:0:0:0:0:0:Madrid:16:0:0:NA
-roster-player:Dustin Hancock:65:66:48:66:63:4:18:ambitious:NA:steal:charge:fireteam:0:0:0:0:0:0:Hiroshima:20:0:0:NA
-roster-player:Phinneas Mariucci:46:62:68:44:42:10:16:ambitious:NA:steal:charge:fireteam:0:0:0:0:0:0:Denver:20:0:0:NA
-roster-player:Archie Su:59:65:70:66:65:3:20:stoic:NA:steal:charge:fireteam:0:0:0:0:0:0:Hollywood:16:0:0:NA
-roster-player:Red Bozeman:65:65:66:50:59:12:10:stoic:NA:steal:charge:fireteam:0:0:0:0:0:0:Hiroshima:19:0:0:NA
+roster-player:Doug Sherpa:54:46:78:44:52:10:37:reactive:NA:ambush:ambush:ambush:0:218:97:73:0:384:Denver:19:0:0:NA
+
+roster-player:Rufus Gould:73:84:63:51:76:21:36:stoic:NA:ambush:ambush:ambush:0:366:73:210:0:384:Chicago:20:0:0:NA
+
+roster-player:Bobby Calumet:50:63:50:70:69:23:24:ambitious:NA:ambush:ambush:ambush:0:216:121:117:0:384:Fukuoka:16:0:0:NA
+
+roster-player:Ted Macklin:68:70:62:32:57:26:32:stoic:NA:steal:charge:fireteam:0:198:113:103:17:384:Madrid:16:0:0:NA
+
+roster-player:Dustin Hancock:73:79:60:66:69:16:24:ambitious:NA:steal:charge:fireteam:0:343:147:201:20:384:Hiroshima:20:0:0:NA
+
+roster-player:Phinneas Mariucci:61:83:82:44:55:25:21:ambitious:NA:steal:charge:fireteam:0:307:139:162:18:384:Denver:20:0:0:NA
+
+roster-player:Archie Su:61:81:75:66:75:18:29:stoic:NA:steal:charge:fireteam:0:184:118:104:20:384:Hollywood:16:0:0:NA
+
+roster-player:Red Bozeman:75:91:76:50:74:36:24:stoic:NA:steal:charge:fireteam:0:203:118:131:20:384:Hiroshima:19:0:0:NA
+
 roster-player:Robert Johnson:55:55:48:47:43:9:15:eager:NA:bench:bench:bench:0:0:0:0:0:0:Hollywood:20:0:0:NA
+
 roster-player:Garth James:45:53:50:46:40:14:19:reactive:NA:bench:bench:bench:0:0:0:0:0:0:Silicon Valley:17:0:0:NA
+
 roster-player:Dimitri Charelston:57:57:42:71:62:5:20:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Sendai:16:0:0:NA
+
 roster-player:Dipper Rhinelander:61:57:55:45:51:14:14:aggressive:NA:bench:bench:bench:0:0:0:0:0:0:Hamburg:20:0:0:NA
+
 #PROSPECTS
