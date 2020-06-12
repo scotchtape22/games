@@ -1,4 +1,4 @@
-World Championship Laser Tag puts players in the role of the GM of a Laser Tag team in the 1980s, but also the future.  You manage your roster and tactics to build the best possible strategy to defeat your opponents in asychrnonus matches.
+World Championship Laser Tag puts players in the role of the GM of a Laser Tag team in the 1980s, but also the future.  You manage your roster and tactics to build the best possible strategy to defeat your opponents in autobattle matches.
 
 
 
