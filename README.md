@@ -1,5 +1,6 @@
 World Championship Laser Tag puts players in the role of the GM of a Laser Tag team in the 1980s, but also the future.  You manage your roster and tactics to build the best possible strategy to defeat your opponents in asychrnonus matches.
 
+To play the current version using python3.6 to run wclt.py, and enter 2 of the .team files when prompted.  You can manually edit the .team files to change tactics.
 
 
 # WCLT Roadmap
